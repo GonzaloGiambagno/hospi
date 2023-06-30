@@ -58,7 +58,7 @@ export default function StickyNavbar() {
   return (
     <>
       <BannerTop />
-      <Navbar className="mx-auto max-w-screen-2xl px-4 py-2 sticky top z-10 rounded-t-none">
+      <Navbar className="mx-auto max-w-screen-2xl px-4 py-2 sticky top-0 z-10 rounded-t-none">
         <div className="flex items-center justify-between text-blue-gray-900">
           <LogoHeader />
           <div className="hidden lg:block">
