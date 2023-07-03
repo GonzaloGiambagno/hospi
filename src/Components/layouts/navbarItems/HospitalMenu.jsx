@@ -51,8 +51,8 @@ const navListInicioItems = [
   {
     color: "red",
     icon: FaUserInjured,
-    title: "Portal del paciente",
-    description: "Ingresa a tu Portal, podes ver tus estudios y citas",
+    title: "ART",
+    description: "Medicina Laboral",
   },
   {
     color: "purple",

@@ -65,7 +65,7 @@ export default function StickyNavbar() {
             <NavList />
           </div>
           <div className="hidden lg:flex">
-            <Button variant="gradient" size="sm" className="flex items-center gap-2" color="green">
+            <Button variant="gradient" size="sm" className="flex items-center gap-2 rounded-full px-5" color="green">
                 <BsTelephone size={22} />
               Contactanos
             </Button>
