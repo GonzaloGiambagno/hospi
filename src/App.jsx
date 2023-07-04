@@ -1,18 +1,20 @@
 import StickyNavbar from "./Components/layouts/StickyNavbar";
 import Footer from "./Components/layouts/footer/Footer";
 import "./App.css"
-import Hero from "./Components/Inicio/Hero";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Inicio from "./Pages/Inicio";
+
 
 function App() {
 
   return (
-    <>
-      <div className="">
+    <BrowserRouter>
         <StickyNavbar />
-        <Hero />
+        <Routes>
+          <Route path="/" element={<Inicio />} />
+        </Routes>
         <Footer />
-      </div>
-    </>
+    </BrowserRouter>
   )
 }
 

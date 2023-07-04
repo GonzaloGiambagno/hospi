@@ -1,32 +1,35 @@
 import { CardHeader, Typography } from "@material-tailwind/react";
+// import { useEffect } from "react";
+import CountUp from "react-countup";
+
 
 const Estadisticas = () => {
   return (
-      <CardHeader variant="gradient" color="green" className=" h-28 grid place-items-center mt-4">
-        <div className="flex flex-row space-between items-center">
-          <div className="p-1  text-center">
-            <Typography variant="h5">
-              30000
+      <CardHeader variant="gradient" color="green" className="mx-auto h-auto sm:h-auto lg:h-24 w-11/12 lg:bottom-7 grid place-content-center">
+        <div className="flex flex-wrap justify-around w-full flex-col lg:gap-4 md:flex-row">
+          <div className="p-2 flex flex-col justify-center items-center flex-wrap">
+            <Typography variant="h5" className="count-number">
+              <CountUp end={30000} duration={7} />
             </Typography>
-            <Typography variant="paragraph">Consultas Ambulatorias</Typography>
+            <Typography variant="paragraph">Consultas Ambulatorias por mes</Typography>
           </div>
-          <div className="p-1  text-center">
-            <Typography variant="h5">
-              +250
+          <div className="p-2  flex flex-col justify-center items-center flex-wrap">
+            <Typography variant="h5" className="count-number">
+              +<CountUp end={250} duration={7} />
             </Typography>
-            <Typography variant="paragraph">Personas En formación</Typography>
+            <Typography variant="paragraph">Personas en formación</Typography>
           </div>
-          <div className="p-1  text-center">
-            <Typography variant="h5">
-              1000
+          <div className="p-2  flex flex-col justify-center items-center flex-wrap">
+            <Typography variant="h5" className="count-number">
+            <CountUp end={1000} duration={7} />
             </Typography>
-            <Typography variant="paragraph">Trasplantes de Medula</Typography>
+            <Typography variant="paragraph">Trasplantes de Medula Osea</Typography>
           </div>
-          <div className="p-1  text-center">
-            <Typography variant="h5">
-              +1500
+          <div className="p-2  flex flex-col justify-center items-center flex-wrap">
+            <Typography variant="h5" className="count-number">
+              +<CountUp end={1500} duration={7} />
             </Typography>
-            <Typography variant="paragraph">Personas cuidandote</Typography>
+            <Typography variant="paragraph">Personas cuidando tu salud</Typography>
           </div>
         </div>
       </CardHeader>
