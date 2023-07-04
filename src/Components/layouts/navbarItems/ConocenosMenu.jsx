@@ -101,7 +101,7 @@ export function ConocenosListMenu() {
       <Menu
         open={isMenuOpen}
         handler={setIsMenuOpen}
-        offset={{ mainAxis: 20 }}
+        offset={{ mainAxis: 30, crossAxis: 50 }}
         placement="bottom"
         allowHover={true}
       >
@@ -129,7 +129,7 @@ export function ConocenosListMenu() {
             </ListItem>
           </Typography>
         </MenuHandler>
-        <MenuList className="hidden max-w-screen-xl rounded-xl lg:block">
+        <MenuList className="hidden max-w-screen-xl mx-auto rounded-xl lg:flex justify-center">
           <ul className="grid grid-cols-3 gap-y-2 focus:outline-none hover:outline-none">{renderItems}</ul>
         </MenuList>
       </Menu>

@@ -41,7 +41,7 @@ const navListEducacionItems = [
     color: "purple",
     icon: GiHealing,
     title: "Tecnicatura en Enfermería",
-    description: "Conocé todos los requisitos para estudiar con nosotros."
+    description: "Estudiá con nosotros."
   },
   {
     color: "cyan",
@@ -87,7 +87,7 @@ export function EducacionListMenu() {
       <Menu
         open={isMenuOpen}
         handler={setIsMenuOpen}
-        offset={{ mainAxis: 20 }}
+        offset={{ mainAxis: 30, crossAxis: -110 }}
         placement="bottom"
         allowHover={true}
       >

@@ -98,9 +98,10 @@ export function InicioListMenu() {
       <Menu
         open={isMenuOpen}
         handler={setIsMenuOpen}
-        offset={{ mainAxis: 20 }}
+        offset={{ mainAxis: 30, crossAxis: 175 }}
         placement="bottom"
         allowHover={true}
+        
       >
         <MenuHandler>
           <Typography as="div" variant="small" className="font-normal">
@@ -126,9 +127,9 @@ export function InicioListMenu() {
             </ListItem>
           </Typography>
         </MenuHandler>
-        <MenuList className="hidden max-w-screen-xl rounded-xl lg:block">
-          <ul className="grid grid-cols-3 gap-y-2 focus:outline-none hover:outline-none">{renderItems}</ul>
-        </MenuList>
+          <MenuList className="hidden lg:block max-w-screen-xl mx-auto rounded-xl">
+           <ul className="grid grid-cols-3 gap-y-2 focus:outline-none hover:outline-none">{renderItems}</ul>
+          </MenuList>
       </Menu>
       <div className="block lg:hidden">
         <Collapse open={isMobileMenuOpen}>{renderItems}</Collapse>

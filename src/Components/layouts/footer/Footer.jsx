@@ -28,9 +28,9 @@ export default function Footer() {
         <CardHeader
           variant="gradient"
           color="green"
-          className="top-10 grid h-24 w-10/12 place-items-center"
+          className="top-10 grid h-36 sm:h-24 w-10/12 place-items-center"
         >
-            <div className="flex justify-around w-10/12">
+            <div className="flex flex-wrap justify-around w-10/12 flex-col gap-2 md:flex-row">
                 <div className="flex gap-2">
                     <BsFillPinMapFill size={22} />
                     <span>Av. 51 Nº 1725 e/ 29 y 30</span>

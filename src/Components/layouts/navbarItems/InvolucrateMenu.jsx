@@ -74,7 +74,7 @@ export function InvolucrateListMenu() {
       <Menu
         open={isMenuOpen}
         handler={setIsMenuOpen}
-        offset={{ mainAxis: 20 }}
+        offset={{ mainAxis: 30 }}
         placement="bottom"
         allowHover={true}
       >

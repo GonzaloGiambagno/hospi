@@ -6,12 +6,9 @@ import {
   IconButton,
   List,
   ListItem,
-  Typography
+  Typography,
 } from "@material-tailwind/react";
-import {
-  Bars3Icon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import BannerTop from "./BannerTop";
 import { LogoHeader } from "../../assets/Logoheader.jsx";
 import { InicioListMenu } from "./navbarItems/HospitalMenu";
@@ -36,11 +33,11 @@ function NavList() {
         className="font-normal"
         Target="_blank"
       >
-      <ListItem className="flex items-center gap-2 py-2 pr-4">
+        <ListItem className="flex items-center gap-2 py-2 pr-4">
           <LuHeartHandshake className="h-[18px] w-[18px]" />
           Fundacion
         </ListItem>
-        </Typography>
+      </Typography>
     </List>
   );
 }
@@ -65,8 +62,13 @@ export default function StickyNavbar() {
             <NavList />
           </div>
           <div className="hidden lg:flex">
-            <Button variant="gradient" size="sm" className="flex items-center gap-2 rounded-full px-5" color="green">
-                <BsTelephone size={22} />
+            <Button
+              variant="gradient"
+              size="sm"
+              className="flex items-center gap-2 rounded-full px-5"
+              color="green"
+            >
+              <BsTelephone size={22} />
               Contactanos
             </Button>
           </div>
@@ -86,10 +88,8 @@ export default function StickyNavbar() {
         <Collapse open={openNav}>
           <NavList />
           <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-            <Button variant="gradient" size="sm" fullWidth>
-              <span>
-                <BsTelephone size={24} />
-              </span>
+            <Button variant="gradient" size="sm" fullWidth className="flex items-center justify-center gap-4">
+              <BsTelephone size={24} />
               Contactanos
             </Button>
           </div>
