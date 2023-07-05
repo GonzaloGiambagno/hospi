@@ -1,12 +1,12 @@
 import { Typography } from "@material-tailwind/react";
-import { BsVirus } from "react-icons/bs";
+import { AiOutlineUsergroupAdd } from "react-icons/ai";
 
-const BannerCovid = () => {
+const BannerSumate = () => {
   return (
-    <section className="max-w-screen-2xl mx-auto mt-10 py-5 bg-gradient-to-r from-red-200 via-red-400 to-red-500 rounded-xl">
+    <section className="max-w-screen-2xl mx-auto mt-10 py-5 bg-gradient-to-r from-gray-300 to-gray-600 rounded-xl">
       <div className="flex justify-center items-center gap-16">
         <Typography variant="h5" color="blue-gray" className="text-center flex gap-4 items-center">
-          <BsVirus size={28}/> Datos en tiempo real del COVID-19 en nuestro Hospital
+          <AiOutlineUsergroupAdd size={32}/> ¿Quéres ser parte de nuestro Hospital? ¡SUMATE AL EQUIPO!
         </Typography>
         <a
           href="#_"
@@ -16,7 +16,7 @@ const BannerCovid = () => {
             <svg
               className="w-6 h-6"
               fill="none"
-              stroke="red"
+              stroke="gray"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -29,13 +29,13 @@ const BannerCovid = () => {
             </svg>
           </span>
           <span className="absolute flex items-center justify-center w-full h-full text-white transition-all duration-300 transform group-hover:translate-x-full ease">
-            Ver Reporte
+          Envianos tu CV
           </span>
-          <span className="relative invisible">ver reporte</span>
+          <span className="relative invisible">Envianos tu CV</span>
         </a>
       </div>
     </section>
   );
 };
 
-export default BannerCovid;
+export default BannerSumate;

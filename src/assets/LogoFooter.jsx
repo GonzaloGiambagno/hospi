@@ -6,7 +6,7 @@ const logoFooter = () => (
     xmlnsXlink="http://www.w3.org/1999/xlink"
     x="0px"
     y="0px"
-    width="350px"
+    width="200px"
     viewBox="0 0 140 41"
     style={{
       enableBackground: "new 0 0 140 41",

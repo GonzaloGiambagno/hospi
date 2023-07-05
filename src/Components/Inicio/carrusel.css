@@ -1,0 +1,30 @@
+/* Carrusel */
+.slick-slider {
+    position: relative;
+  }
+  
+  /* Diapositivas */
+  .slick-slide {
+    margin: 0 10px; /* Espacio entre las diapositivas */
+  }
+  
+  /* Flechas de navegación */
+  .slick-prev {
+    left: -52px !important;
+  }
+  .slick-next:before,
+  .slick-prev:before {
+    content: "" !important;
+  }
+  .next-slick-arrow,
+  .prev-slick-arrow {
+    color: #7d7c7c;
+    font-size: 45px;
+  }
+
+  .containe {
+    margin: 0 auto;
+    width: 100%;
+    height: 45vh;
+    border-color: white;
+  }

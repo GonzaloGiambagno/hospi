@@ -2,19 +2,30 @@ import { Typography, CardHeader } from "@material-tailwind/react";
 import LogoFooter from "../../../assets/LogoFooter";
 import { BsFillPinMapFill, BsFillTelephoneFill } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
+import Certificaciones from "../../../assets/certificaciones.png";
+import pdp from "../../../assets/pdp2013.jpg";
+import datafiscal from "../../../assets/dataweb.jpg";
 
-const LINKS = [
+const items = [
   {
-    title: "Product",
-    items: ["Overview", "Features", "Solutions", "Tutorials"],
+    descripcion: "Guardia y Urgencias",
+    link: "",
   },
   {
-    title: "Company",
-    items: ["About us", "Careers", "Press", "News"],
+    descripcion: "Horarios",
+    link: "",
   },
   {
-    title: "Resource",
-    items: ["Blog", "Newsletter", "Events", "Help center"],
+    descripcion: "Tramites y documentacion",
+    link: "",
+  },
+  {
+    descripcion: "Fundacion Hospital",
+    link: "",
+  },
+  {
+    descripcion: "Trabaja con nosotros",
+    link: "",
   },
 ];
 
@@ -25,56 +36,58 @@ export default function Footer() {
     <footer className="relative bottom-0 w-full  ">
       <div className="mx-auto w-full max-w-7xl px-5 rounded-t-2xl ">
         <div className="flex justify-center">
-        <CardHeader
-          variant="gradient"
-          color="green"
-          className="top-10 grid h-36 sm:h-24 w-10/12 place-items-center"
-        >
+          <CardHeader
+            variant="gradient"
+            color="green"
+            className="top-10 grid h-36 sm:h-24 w-10/12 place-items-center"
+          >
             <div className="flex flex-wrap justify-around w-10/12 flex-col gap-2 md:flex-row">
-                <div className="flex gap-2">
-                    <BsFillPinMapFill size={22} />
-                    <span>Av. 51 Nº 1725 e/ 29 y 30</span>
-                </div>
-                <div className="flex gap-2">
-                    <BsFillTelephoneFill size={22} />
-                    <span>+54 221 512 9500</span>
-                </div>
-                <div className="flex gap-2">
-                    <HiOutlineMail size={24} />
-                    <span>info@italianolaplata.org.ar</span>
-                </div>
-
+              <div className="flex gap-2">
+                <BsFillPinMapFill size={22} />
+                <span>Av. 51 Nº 1725 e/ 29 y 30</span>
+              </div>
+              <div className="flex gap-2">
+                <BsFillTelephoneFill size={22} />
+                <span>+54 221 512 9500</span>
+              </div>
+              <div className="flex gap-2">
+                <HiOutlineMail size={24} />
+                <span>info@italianolaplata.org.ar</span>
+              </div>
             </div>
-        </CardHeader>
+          </CardHeader>
         </div>
         <div className="grid grid-cols-1 justify-between p-4 pt-16 mt-2 items-center md:grid-cols-2 content-center border-t border-blue-gray-100">
-          <div className="flex justify-center">
+          <div className="flex flex-col justify-center items-center gap-3 flex-wrap">
             <LogoFooter />
+            <img src={Certificaciones} alt="certificaciones" />
           </div>
-          <div className="grid grid-cols-3 justify-between gap-4">
-            {LINKS.map(({ title, items }) => (
-              <ul key={title}>
-                <Typography
-                  variant="small"
-                  color="blue-gray"
-                  className="mb-2 font-medium opacity-40"
-                >
-                  {title}
-                </Typography>
-                {items.map((link) => (
-                  <li key={link}>
-                    <Typography
-                      as="a"
-                      href="#"
-                      color="gray"
-                      className="py-1 font-normal opacity-80 transition-colors hover:text-green-700"
-                    >
-                      {link}
-                    </Typography>
-                  </li>
-                ))}
-              </ul>
-            ))}
+          <div className="grid grid-cols-2 justify-between gap-4">
+            <ul>
+              <Typography
+                variant="small"
+                color="blue-gray"
+                className="mb-2 font-medium opacity-40"
+              >
+                Accesos Rapidos
+              </Typography>
+              {items.map((item, index) => (
+                <li key={index}>
+                  <Typography
+                    as="a"
+                    href={item.link}
+                    color="gray"
+                    className="py-1 font-normal opacity-80 transition-colors hover:text-green-700"
+                  >
+                    {item.descripcion}
+                  </Typography>
+                </li>
+              ))}
+            </ul>
+            <div className="flex gap-2 justify-center items-center">
+              <img src={pdp} alt="pdp2023" className="w-28 h-24" />
+              <img src={datafiscal} alt="data fiscal" className="w-24 h-28"/>
+            </div>
           </div>
         </div>
         <div className="mt-8 flex w-full flex-col items-center justify-center border-t border-blue-gray-100  py-4 md:flex-row md:justify-between">
