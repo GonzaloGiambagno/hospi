@@ -1,0 +1,94 @@
+{
+    "servicios": [
+      {
+        "servicio": "Turnos telefónicos",
+        "interno": "(0221) 457 3001",
+        "horario": "De lunes a viernes de 8 a 16"
+      },
+      {
+        "servicio": "Orientación al paciente",
+        "interno": "264"
+      },
+      {
+        "servicio": "Chequeos Médicos",
+        "interno": "394 / 246"
+      },
+      {
+        "servicio": "Cardiología",
+        "interno": "223"
+      },
+      {
+        "servicio": "Centro de la mujer",
+        "interno": "435 / 458"
+      },
+      {
+        "servicio": "Cirugía",
+        "interno": "293"
+      },
+      {
+        "servicio": "Clínica médica",
+        "interno": "402"
+      },
+      {
+        "servicio": "Gastroenterología",
+        "interno": "241"
+      },
+      {
+        "servicio": "Diagnóstico por imágenes - Tomografía",
+        "interno": "622 / 627"
+      },
+      {
+        "servicio": "Diagnóstico por imágenes - Ecodoppler",
+        "interno": "252"
+      },
+      {
+        "servicio": "Diagnóstico por imágenes - Ecografía / Mamografía / Densitometría / Radiología",
+        "interno": "231 / 453"
+      },
+      {
+        "servicio": "Guardia central y emergencias",
+        "interno": "373 / 488"
+      },
+      {
+        "servicio": "Hematología",
+        "interno": "555"
+      },
+      {
+        "servicio": "Hospital de día polivalente",
+        "interno": "635"
+      },
+      {
+        "servicio": "Laboratorio",
+        "interno": "238"
+      },
+      {
+        "servicio": "Medicina del trabajo (ART)",
+        "interno": "367"
+      },
+      {
+        "servicio": "Medicina nuclear",
+        "interno": "494"
+      },
+      {
+        "servicio": "Oftalmología",
+        "interno": "235"
+      },
+      {
+        "servicio": "Ortopedia y traumatología",
+        "interno": "229"
+      },
+      {
+        "servicio": "Otorrinolaringología",
+        "interno": "237"
+      },
+      {
+        "servicio": "Pediatría",
+        "interno": "402"
+      },
+      {
+        "servicio": "Vacunación",
+        "interno": "249"
+      }
+    ]
+  }
+  

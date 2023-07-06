@@ -4,6 +4,7 @@ import "./App.css"
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Inicio from "./Pages/Inicio";
 import ScrollToTopButton from "./Components/layouts/ScrollToTop";
+import Contactos from "./Pages/Contactos";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <StickyNavbar />
         <Routes>
           <Route path="/" element={<Inicio />} />
+          <Route path="/contactos" element={<Contactos />} />
         </Routes>
         <Footer />
         <ScrollToTopButton />

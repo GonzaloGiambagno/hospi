@@ -40,9 +40,6 @@ export default function Ubicacion() {
 
   return (
     <div className="mx-auto max-w-screen-2xl mt-2">
-      <Typography variant="h3" color="green" className="p-8">
-        Donde Estamos?
-      </Typography>
       <Tabs id="custom-animation" value="Hospital Italiano">
         <TabsHeader
           indicatorProps={{
@@ -102,7 +99,6 @@ export default function Ubicacion() {
                       width="450" 
                       height="400"
                       loading="lazy" 
-                      allowfullscreen
                     ></iframe>
                   </div>
                 </div>

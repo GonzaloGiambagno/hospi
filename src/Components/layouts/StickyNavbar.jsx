@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Navbar,
   Collapse,
@@ -17,6 +16,8 @@ import { InvolucrateListMenu } from "./navbarItems/InvolucrateMenu";
 import { EducacionListMenu } from "./navbarItems/EducacionMenu";
 import { BsTelephone } from "react-icons/bs";
 import { LuHeartHandshake } from "react-icons/lu";
+import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 function NavList() {
   return (
@@ -43,21 +44,24 @@ function NavList() {
 }
 
 export default function StickyNavbar() {
-  const [openNav, setOpenNav] = React.useState(false);
+  const [openNav, setOpenNav] = useState(false);
+  const navigate = useNavigate()
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener(
       "resize",
       () => window.innerWidth >= 960 && setOpenNav(false)
     );
   }, []);
 
+
+
   return (
     <>
       <BannerTop />
       <Navbar className="mx-auto max-w-screen-2xl px-4 py-2 sticky top-0 z-10 rounded-t-none">
         <div className="flex items-center justify-between text-blue-gray-900">
-          <LogoHeader />
+          <a href="/"><LogoHeader /></a> 
           <div className="hidden lg:block">
             <NavList />
           </div>
@@ -67,6 +71,7 @@ export default function StickyNavbar() {
               size="sm"
               className="flex items-center gap-2 rounded-full px-5"
               color="green"
+              onClick={()=>navigate("/contactos")}
             >
               <BsTelephone size={22} />
               Contactanos
@@ -87,8 +92,8 @@ export default function StickyNavbar() {
         </div>
         <Collapse open={openNav}>
           <NavList />
-          <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-            <Button variant="gradient" size="sm" fullWidth className="flex items-center justify-center gap-4">
+          <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden" >
+            <Button variant="gradient" size="sm" fullWidth className="flex items-center justify-center gap-4" onClick={()=>navigate("/contactos")}>
               <BsTelephone size={24} />
               Contactanos
             </Button>
