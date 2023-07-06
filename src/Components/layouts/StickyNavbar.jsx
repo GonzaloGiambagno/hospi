@@ -31,7 +31,7 @@ function NavList() {
         variant="small"
         color="blue-gray"
         className="font-normal"
-        Target="_blank"
+        target="blank"
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
           <LuHeartHandshake className="h-[18px] w-[18px]" />

@@ -2,7 +2,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { AiFillLeftCircle, AiFillRightCircle } from "react-icons/ai";
-import './carrusel.css'
+import './InstagramCarrusel.css'
 import { Button, Typography } from "@material-tailwind/react";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 

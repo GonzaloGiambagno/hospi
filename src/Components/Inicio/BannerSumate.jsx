@@ -3,13 +3,14 @@ import { AiOutlineUsergroupAdd } from "react-icons/ai";
 
 const BannerSumate = () => {
   return (
-    <section className="max-w-screen-2xl mx-auto mt-10 py-5 bg-gradient-to-r from-gray-300 to-gray-600 rounded-xl">
-      <div className="flex justify-center items-center gap-16">
+    <section className="max-w-screen-2xl mx-auto mt-10 py-5 bg-gradient-to-r from-gray-300 to-gray-600 sm:rounded-xl">
+      <div className="flex flex-wrap justify-center gap-2 items-center lg:gap-16 p-1">
         <Typography variant="h5" color="blue-gray" className="text-center flex gap-4 items-center">
-          <AiOutlineUsergroupAdd size={32}/> ¿Quéres ser parte de nuestro Hospital? ¡SUMATE AL EQUIPO!
+          <AiOutlineUsergroupAdd size={32} className="hidden md:block"/> ¿Quéres ser parte de nuestro Hospital? ¡SUMATE AL EQUIPO!
         </Typography>
         <a
-          href="#_"
+          href="https://italianolaplata.hiringroom.com/jobs"
+          target="blank"
           className="relative inline-flex items-center justify-center p-4 px-6 py-2 overflow-hidden font-small text-white transition duration-200 ease-out border-2 border-white rounded-full shadow-md group"
         >
           <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-white group-hover:translate-x-0 ease">

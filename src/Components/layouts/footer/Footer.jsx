@@ -34,7 +34,7 @@ const currentYear = new Date().getFullYear();
 export default function Footer() {
   return (
     <footer className="relative bottom-0 w-full  ">
-      <div className="mx-auto w-full max-w-7xl px-5 rounded-t-2xl ">
+      <div className="mx-auto w-full max-w-screen-2xl mt-10 px-5 rounded-t-2xl ">
         <div className="flex justify-center">
           <CardHeader
             variant="gradient"
@@ -62,7 +62,7 @@ export default function Footer() {
             <LogoFooter />
             <img src={Certificaciones} alt="certificaciones" />
           </div>
-          <div className="grid grid-cols-2 justify-between gap-4">
+          <div className="grid mt-4 md:mt-0 sm:grid-cols-2 justify-center md:justify-between  md:gap-4">
             <ul>
               <Typography
                 variant="small"
