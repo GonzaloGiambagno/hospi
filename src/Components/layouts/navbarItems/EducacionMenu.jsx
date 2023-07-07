@@ -12,6 +12,7 @@ import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
 import { FaChalkboardTeacher, FaUserGraduate } from 'react-icons/fa';
 import { IoSchoolOutline, IoCalendarOutline } from 'react-icons/io5';
 import { GiHealing } from 'react-icons/gi';
+import { Link } from "react-router-dom";
 
 const colors = {
   blue: "bg-blue-50 text-blue-500",
@@ -29,25 +30,29 @@ const navListEducacionItems = [
     color: "green",
     icon: FaChalkboardTeacher,
     title: "Docencia e Investigacion",
-    description: "Nuestro compromiso por la comunidad"
+    description: "Nuestro compromiso por la comunidad",
+    linkTo: "/"
   },
   {
     color: "blue",
     icon: FaUserGraduate,
     title: "Formación profesional",
-    description: "¡Realiza con nosotros tus prácticas Profesionales!"
+    description: "¡Realiza con nosotros tus prácticas Profesionales!",
+    linkTo: "/"
   },
   {
     color: "purple",
     icon: GiHealing,
     title: "Tecnicatura en Enfermería",
-    description: "Estudiá con nosotros."
+    description: "Estudiá con nosotros.",
+    linkTo: "/"
   },
   {
     color: "cyan",
     icon: IoCalendarOutline,
     title: "Cursos y Jornadas",
-    description: "Enterate sobre nuestras jornadas y talleres"
+    description: "Enterate sobre nuestras jornadas y talleres",
+    linkTo: "/"
   },
 ];
 
@@ -56,8 +61,8 @@ export function EducacionListMenu() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const renderItems = navListEducacionItems.map(
-    ({ icon, title, description, color }, key) => (
-      <a href="#" key={key}>
+    ({ icon, title, description, color, linkTo }, key) => (
+      <Link to={linkTo} key={key}>
         <MenuItem className="flex items-center gap-3 rounded-lg">
           <div className={`rounded-lg p-5 ${colors[color]}`}>
             {React.createElement(icon, {
@@ -78,7 +83,7 @@ export function EducacionListMenu() {
             </Typography>
           </div>
         </MenuItem>
-      </a>
+      </Link>
     )
   );
 

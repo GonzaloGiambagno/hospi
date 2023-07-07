@@ -11,6 +11,7 @@ import {
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
 import { BiDonateHeart, BiDonateBlood } from 'react-icons/bi';
 import { GiThreeFriends } from 'react-icons/gi';
+import { Link } from "react-router-dom";
 
 const colors = {
   blue: "bg-blue-50 text-blue-500",
@@ -28,13 +29,15 @@ const navListInvolucrateItems = [
     color: "red",
     icon: BiDonateBlood,
     title: "Doná sangre y/o tejidos",
-    description: "Salvá vidas, Tu aporte es importante!"
+    description: "Salvá vidas, Tu aporte es importante!",
+    linkTo: "/"
   },
   {
     color: "green",
     icon: GiThreeFriends,
     title: "Nuestros Amigos",
-    description: "¡Conocé nuestros amigos y benefactores!"
+    description: "¡Conocé nuestros amigos y benefactores!",
+    linkTo: "/"
   },
 ];
 
@@ -43,8 +46,8 @@ export function InvolucrateListMenu() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const renderItems = navListInvolucrateItems.map(
-    ({ icon, title, description, color }, key) => (
-      <a href="#" key={key}>
+    ({ icon, title, description, color, linkTo }, key) => (
+      <Link to={linkTo} key={key}>
         <MenuItem className="flex items-center gap-3 rounded-lg">
           <div className={`rounded-lg p-5 ${colors[color]}`}>
             {React.createElement(icon, {
@@ -65,7 +68,7 @@ export function InvolucrateListMenu() {
             </Typography>
           </div>
         </MenuItem>
-      </a>
+      </Link>
     )
   );
 

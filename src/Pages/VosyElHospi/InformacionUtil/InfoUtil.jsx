@@ -7,8 +7,10 @@ import {
   TabPanel,
 } from "@material-tailwind/react";
 import { Helmet } from "react-helmet";
-import Horarios from "../../../Components/Vosyelhospital/Info util/Horarios";
-import Guardia from "../../../Components/Vosyelhospital/Info util/Guardia";
+import Horarios from "../../../Components/Vosyelhospital/InformacionUtil/Horarios";
+import Guardia from "../../../Components/Vosyelhospital/InformacionUtil/Guardia";
+import { useLocation, useNavigate } from 'react-router-dom';
+import ServiciosYEsp from "../../../Components/Vosyelhospital/InformacionUtil/ServiciosYEsp";
 
 const InfoUtil = () => {
   const data = [
@@ -25,7 +27,7 @@ const InfoUtil = () => {
     {
       label: "Servicios y especialidades",
       value: "serviciosyespecialidades",
-      component: "",
+      component: <ServiciosYEsp />,
     },
     {
       label: "Obras Sociales",
@@ -54,7 +56,18 @@ const InfoUtil = () => {
     },
   
   ];
+  const location = useLocation();
+  const navigate = useNavigate();
 
+  const selectedTab = new URLSearchParams(location.search).get('tab');
+
+    const handleTabChange = (value) => {
+      const url = new URL(window.location.href);
+      url.searchParams.set('tab', value);
+      navigate(url.search, { replace: true });
+    };
+
+  
   return (
     <>
       <Helmet>
@@ -68,12 +81,12 @@ const InfoUtil = () => {
         <Typography
           variant="h2"
           color="green"
-          className="py-5 text-center"
+          className="py-5"
           textGradient
         >
-          Informacion Util
+          Informacion útil
         </Typography>
-        <Tabs value="horarios" orientation="vertical" className="flex-col md:flex-row">
+        <Tabs value={selectedTab || 'horarios'}  orientation="vertical" className="flex-col md:flex-row">
           <TabsHeader
             className="w-screen md:w-72 divide-y"
             indicatorProps={{
@@ -81,7 +94,7 @@ const InfoUtil = () => {
             }}
           >
             {data.map(({ label, value }) => (
-              <Tab key={value} value={value} className="justify-start text-left z-0">
+              <Tab key={value} value={value} className="justify-start text-left z-0" onClick={() => handleTabChange(value)}>
                 {label}
               </Tab>
             ))}

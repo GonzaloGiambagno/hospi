@@ -14,6 +14,7 @@ import { FcAbout } from 'react-icons/fc';
 import { GiHealthIncrease } from 'react-icons/gi';
 import { HiUserGroup } from 'react-icons/hi';
 import { MdOutlineHealthAndSafety } from 'react-icons/md';
+import { Link } from "react-router-dom";
 
 const colors = {
   blue: "bg-blue-50 text-blue-500",
@@ -32,36 +33,42 @@ const navListConocenosItems = [
     icon: FcAbout,
     title: "Quienes somos",
     description: "Queremos que nos conozcas",
+    linkTo: "/"
   },
   {
     color: "green",
     icon: GiHealthIncrease,
     title: "Gestión Hospitalaria",
     description: "Un nuevo concepto de medicina hospitalaria",
+    linkTo: "/"
   },
   {
     color: "red",
     icon: HiUserGroup,
     title: "Autoridades",
     description: "Nuestro equipo de trabajo",
+    linkTo: "/"
   },
   {
     color: "teal",
     icon: MdOutlineHealthAndSafety,
     title: "Calidad y seguridad",
     description: "Calidad en la salud",
+    linkTo: "/"
   },
   {
     color: "cyan",
     icon: FaChurch,
     title: "Espiritualidad",
     description: "Nuestra conexión con la Fe",
+    linkTo: "/"
   },
   {
     color: "orange",
     icon: BsBuildings,
     title: "Plan Maestro",
     description: "Reorganización funcional",
+    linkTo: "/"
   },
 ];
 
@@ -70,8 +77,8 @@ export function ConocenosListMenu() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const renderItems = navListConocenosItems.map(
-    ({ icon, title, description, color }, key) => (
-      <a href="#" key={key}>
+    ({ icon, title, description, color, linkTo }, key) => (
+      <Link to={linkTo} key={key}>
         <MenuItem className="flex items-center gap-3 rounded-lg">
           <div className={`rounded-lg p-5 ${colors[color]}`}>
             {React.createElement(icon, {
@@ -92,7 +99,7 @@ export function ConocenosListMenu() {
             </Typography>
           </div>
         </MenuItem>
-      </a>
+      </Link>
     )
   );
 

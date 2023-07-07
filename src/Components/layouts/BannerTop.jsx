@@ -1,4 +1,5 @@
 import { Button } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 
 const InstagramLogo = () => {
   return (
@@ -58,11 +59,11 @@ const BannerTop = () => {
         </a>
       </div>
       <div className="flex gap-3">
-        <a href="" target="blank">
+        <Link to="/vosyelhospital/informacionUtil?tab=guardia">
           <Button variant="text" size="sm" className="p-0.5" color="red">
             guardia
           </Button>
-        </a>
+        </Link>
         <a href="http://italnet.italianolaplata.org.ar/login.aspx" target="blank">
           <Button variant="text" size="sm" color="blue-gray" className="p-0.5">
             Empleados

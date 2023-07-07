@@ -30,7 +30,7 @@ const navListInicioItems = [
     icon: BsInfoCircle,
     title: "Informacion Util",
     description: "Informacion para el paciente",
-    linkTo: "/informacionUtil"
+    linkTo: "/vosyelhospital/informacionUtil"
   },
   {
     color: "green",

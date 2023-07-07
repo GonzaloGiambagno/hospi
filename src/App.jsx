@@ -5,7 +5,8 @@ import Inicio from "./Pages/Inicio";
 import ScrollToTopButton from "./Components/layouts/ScrollToTop";
 import Contactos from "./Pages/Contactos";
 import Layout from "./Pages/Layouts";
-import InfoUtil from "./Pages/VosyElHospi/InformacionUtil/InfoUtil";
+import VosYelHospiRoutes from "./Routes/VosyelHospital/VosyElHospi.routes";
+
 
 
 function App() {
@@ -19,8 +20,7 @@ function App() {
         <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Inicio />} />
-            {/* Vos y el Hospital */}
-            <Route path="/informacionUtil" element={<InfoUtil />} />
+          <Route path="/vosyelhospital/*" element={<VosYelHospiRoutes />} />
           <Route path="/contactos" element={<Contactos />} />
           <Route path="*" element={<Inicio />} />
         </Route>
