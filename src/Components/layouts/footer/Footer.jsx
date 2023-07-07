@@ -44,15 +44,15 @@ export default function Footer() {
             <div className="flex flex-wrap justify-around w-10/12 flex-col gap-2 md:flex-row">
               <div className="flex gap-2">
                 <BsFillPinMapFill size={22} />
-                <span>Av. 51 Nº 1725 e/ 29 y 30</span>
+                <span className="select-all">Av. 51 Nº 1725 e/ 29 y 30</span>
               </div>
               <div className="flex gap-2">
                 <BsFillTelephoneFill size={22} />
-                <span>+54 221 512 9500</span>
+                <span className="select-all">+54 221 512 9500</span>
               </div>
               <div className="flex gap-2">
                 <HiOutlineMail size={24} />
-                <span>info@italianolaplata.org.ar</span>
+                <span className="select-all">info@italianolaplata.org.ar</span>
               </div>
             </div>
           </CardHeader>
@@ -85,8 +85,8 @@ export default function Footer() {
               ))}
             </ul>
             <div className="flex gap-2 justify-center items-center">
-              <img src={pdp} alt="pdp2023" className="w-28 h-24" />
-              <img src={datafiscal} alt="data fiscal" className="w-24 h-28"/>
+              <img src={pdp} alt="pdp2023" className="w-20 h-16 md:w-28 md:h-24" />
+              <img src={datafiscal} alt="data fiscal" className="w-16 h-20 md:w-24 md:h-28"/>
             </div>
           </div>
         </div>

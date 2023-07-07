@@ -1,24 +1,24 @@
-import StickyNavbar from "./Components/layouts/StickyNavbar";
-import Footer from "./Components/layouts/footer/Footer";
 import "./App.css"
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Inicio from "./Pages/Inicio";
 import ScrollToTopButton from "./Components/layouts/ScrollToTop";
 import Contactos from "./Pages/Contactos";
+import Layout from "./Pages/Layouts";
 
 
 function App() {
 
   return (
-    <BrowserRouter>
-        <StickyNavbar />
+    <>
         <Routes>
-          <Route path="/" element={<Inicio />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Inicio />} />
           <Route path="/contactos" element={<Contactos />} />
+          <Route path="*" element={<Inicio />} />
+        </Route>
         </Routes>
-        <Footer />
         <ScrollToTopButton />
-    </BrowserRouter>
+    </>
   )
 }
 

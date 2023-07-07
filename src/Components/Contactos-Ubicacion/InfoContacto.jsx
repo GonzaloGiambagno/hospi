@@ -17,23 +17,23 @@ const InfoContacto = () => {
           <Typography variant="h5" color="green" className="mb-2">
             Otros contactos y Telefonos Utiles
           </Typography>
-          <div className="grid grid-cols-3 gap-20 mt-5 p-2">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-20 mt-5 p-2">
             <div className="flex flex-col justify-center items-center gap-3 w-full bg-gray-100 rounded-2xl py-3 shadow-md ">
               <HiMail size={32} color="#5BB35F"/>
-              <Typography variant="paragraph">
+              <Typography variant="paragraph" className="select-all">
               Info@Italianolaplata.org.ar
               </Typography>
             </div>
             <div className="flex flex-col justify-center items-center gap-3 w-full bg-gray-100 rounded-2xl py-3 shadow-md">
-              <BsHeadset size={32} color="#5BB35F"/>
+              <BsHeadset size={32} color="#5BB35F" />
               <Typography variant="paragraph">
-              <strong>Central de turnos:</strong> (0221) 457-3001
+              <strong>Central de turnos:</strong> <span className="select-all">(0221) 457-3001</span>
               </Typography>
             </div>
             <div className="flex flex-col justify-center items-center gap-3 w-full bg-gray-100 rounded-2xl py-3 shadow-md">
-              <FaSuitcaseMedical size={32} color="#5BB35F" />
+              <FaSuitcaseMedical size={32} color="#5BB35F"/>
               <Typography variant="paragraph">
-              <strong>Guardias y urgencias:</strong> (0221) 512 9500 int. 232
+              <strong>Guardia:</strong> (0221) 512 9500 int. <strong className="text-red-500">232</strong>
               </Typography>
             </div>
 

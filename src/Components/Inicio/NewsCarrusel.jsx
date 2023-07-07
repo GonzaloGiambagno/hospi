@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import Slider from 'react-slick';
 import InnIoma from "../../assets/carruselNoticias/Innauguracion_IOMA_banner_web.webp";
 import añosHospi from "../../assets/carruselNoticias/136_Aniversario_banner_web.webp";
@@ -13,6 +15,36 @@ import './newsCarrusel.css'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
+  <button
+    {...props}
+    className={
+      "slick-prev" +
+      (currentSlide === 0 ? " slick-disabled" : "")
+    }
+    aria-hidden="true"
+    aria-disabled={currentSlide === 0 ? true : false}
+    type="button"
+  >
+    <AiFillLeftCircle className='prev-slick-arrow' />
+  </button>
+);
+
+const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
+  <button
+    {...props}
+    className={
+      "slick-next " +
+      (currentSlide === slideCount - 1 ? " slick-disabled" : "")
+    }
+    aria-hidden="true"
+    aria-disabled={currentSlide === slideCount - 1 ? true : false}
+    type="button"
+  >
+    <AiFillRightCircle className='next-slick-arrow' />
+  </button>
+);
+
 export default function NewsCarrusel() {
   const settings = {
     dots: true,
@@ -20,16 +52,8 @@ export default function NewsCarrusel() {
     speed: 1500, 
     autoplay: true,
     autoplaySpeed: 5000,
-    nextArrow: (
-      <button type="button" className="slick-next">
-        <AiFillRightCircle className='next-slick-arrow' />
-      </button>
-    ),
-    prevArrow: (
-      <button type="button" className="slick-prev">
-        <AiFillLeftCircle className='prev-slick-arrow' />
-      </button>
-    ),
+    prevArrow: <SlickArrowLeft />,
+    nextArrow: <SlickArrowRight />,
   };
 
   return (
