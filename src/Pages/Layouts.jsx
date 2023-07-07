@@ -12,7 +12,9 @@ function Layout() {
 
       <Outlet />
       
+      <footer>
       <ScrollAnimated><Footer /></ScrollAnimated>
+      </footer>
       
     </div>
   );

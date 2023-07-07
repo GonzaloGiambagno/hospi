@@ -33,7 +33,7 @@ const currentYear = new Date().getFullYear();
 
 export default function Footer() {
   return (
-    <footer className="relative bottom-0 w-full  ">
+    <div className="relative bottom-0 w-full  ">
       <div className="mx-auto w-full max-w-screen-2xl mt-10 px-5 rounded-t-2xl ">
         <div className="flex justify-center">
           <CardHeader
@@ -152,6 +152,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </footer>
+    </div>
   );
 }

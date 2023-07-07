@@ -8,9 +8,9 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 
 const Hero = () => {
   return (
-    <main className="h-full mx-auto rounded-br-xl">
+    <article className="h-full mx-auto rounded-br-xl">
       <div className="bgimagen py-8 px-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-0.5 lg:py-20 ">
-        <div className="grid gap-10 lg:grid-cols-2 ">
+        <section className="grid gap-10 lg:grid-cols-2 ">
           <div className="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
             <div className="max-w-2xl mb-6 flex flex-col gap-8">
               <div className="flex items-center">
@@ -38,7 +38,7 @@ const Hero = () => {
               </Button>
             </div>
           </div>
-          <div className="flex items-center justify-center -mx-4 lg:pl-8 ">
+          <section className="flex items-center justify-center -mx-4 lg:pl-8 ">
             <div className="flex flex-col items-end px-3 ">
               <div className="cardcss mb-6">
                 <img
@@ -92,10 +92,10 @@ const Hero = () => {
                 </Button>
               </div>
             </div>
-          </div>
-        </div>
+          </section>
+        </section>
       </div>
-    </main>
+    </article>
   );
 };
 

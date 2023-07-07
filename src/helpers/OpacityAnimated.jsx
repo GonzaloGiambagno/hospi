@@ -6,7 +6,7 @@ const OpacityAnimated = ({ children }) => {
 const ref = useRef(null);
 
 return (
-    <section ref={ref}>
+    <div ref={ref}>
       <motion.div
         initial={{ opacity: 0}}
         animate={{ opacity: 1 }}
@@ -15,7 +15,7 @@ return (
       >
         {children}
       </motion.div>
-    </section>
+    </div>
   )
 }
 

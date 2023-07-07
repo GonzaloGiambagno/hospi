@@ -3,8 +3,8 @@ import { BsVirus } from "react-icons/bs";
 
 const BannerCovid = () => {
   return (
-    <section className="max-w-screen-2xl mx-auto mt-10 py-5 bg-gradient-to-r from-red-200 via-red-400 to-red-500 sm:rounded-xl mb-10">
-      <div className="flex flex-wrap justify-center gap-2 items-center lg:gap-16 p-1">
+    <article className="max-w-screen-2xl mx-auto mt-10 py-5 bg-gradient-to-r from-red-200 via-red-400 to-red-500 sm:rounded-xl mb-10">
+      <section className="flex flex-wrap justify-center gap-2 items-center lg:gap-16 p-1">
         <Typography variant="h5" color="blue-gray" className="text-center flex gap-4 items-center">
           <BsVirus size={28} className="hidden md:block"/> Datos en tiempo real del COVID-19 en nuestro Hospital
         </Typography>
@@ -33,8 +33,8 @@ const BannerCovid = () => {
           </span>
           <span className="relative invisible">ver reporte</span>
         </a>
-      </div>
-    </section>
+      </section>
+    </article>
   );
 };
 

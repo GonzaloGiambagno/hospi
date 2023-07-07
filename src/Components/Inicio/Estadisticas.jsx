@@ -9,25 +9,25 @@ const Estadisticas = () => {
         <div className="flex flex-wrap justify-around w-full flex-col lg:gap-4 md:flex-row">
           <div className="p-2 flex flex-col justify-center items-center flex-wrap">
             <Typography variant="h5" className="count-number">
-              <CountUp end={30000} duration={7} />
+              <CountUp end={30000} duration={2.5} />
             </Typography>
             <Typography variant="paragraph">Consultas Ambulatorias por mes</Typography>
           </div>
           <div className="p-2  flex flex-col justify-center items-center flex-wrap">
             <Typography variant="h5" className="count-number">
-              +<CountUp end={250} duration={7} />
+              +<CountUp end={250} duration={2.5} />
             </Typography>
             <Typography variant="paragraph">Personas en formación</Typography>
           </div>
           <div className="p-2  flex flex-col justify-center items-center flex-wrap">
             <Typography variant="h5" className="count-number">
-            <CountUp end={1000} duration={7} />
+            <CountUp end={1000} duration={2.5} />
             </Typography>
             <Typography variant="paragraph">Trasplantes de Medula Osea</Typography>
           </div>
           <div className="p-2  flex flex-col justify-center items-center flex-wrap">
             <Typography variant="h5" className="count-number">
-              +<CountUp end={1500} duration={7} />
+              +<CountUp end={1500} duration={2.5} />
             </Typography>
             <Typography variant="paragraph">Personas cuidando tu salud</Typography>
           </div>

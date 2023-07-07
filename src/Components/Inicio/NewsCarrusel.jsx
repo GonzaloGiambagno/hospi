@@ -57,18 +57,18 @@ export default function NewsCarrusel() {
   };
 
   return (
-    <div className="mx-auto max-w-screen-2xl">
+    <article className="mx-auto max-w-screen-2xl">
       <Typography variant="h4" color="green" className="mb-5">Ultimas Noticias</Typography>
       <Slider {...settings} >
-          <img src={portada} alt="image 1" className="slick-image md:rounded-xl" />
-          <img src={añosHospi} alt="image 1" className="slick-image md:rounded-xl" />
-          <img src={InnIoma} alt="image 2" className="slick-image md:rounded-xl" />
-          <img src={residencia} alt="image 2" className="slick-image md:rounded-xl" />
-          <img src={premio} alt="image 3" className="slick-image md:rounded-xl" />
-          <img src={bannerpami} alt="image 3" className="slick-image md:rounded-xl" />
-          <img src={convenioIoma} alt="image 3" className="slick-image md:rounded-xl" />
-          <img src={enfermeria} alt="image 3" className="slick-image md:rounded-xl" />
+          <img src={portada} alt="puerta hospital italiano" className="slick-image md:rounded-xl" />
+          <img src={añosHospi} alt="cumple 136 años hospi " className="slick-image md:rounded-xl" />
+          <img src={InnIoma} alt="Innauguracion centro traumatologico con ioma" className="slick-image md:rounded-xl" />
+          <img src={residencia} alt="Residencia, inscripciones" className="slick-image md:rounded-xl" />
+          <img src={premio} alt="premio responsabilidad social" className="slick-image md:rounded-xl" />
+          <img src={bannerpami} alt="firma convenio con pami" className="slick-image md:rounded-xl" />
+          <img src={convenioIoma} alt="convenio directo con IOMA" className="slick-image md:rounded-xl" />
+          <img src={enfermeria} alt="Iscripciones escuela de enfermeria" className="slick-image md:rounded-xl" />
       </Slider>
-    </div>
+    </article>
   );
 }

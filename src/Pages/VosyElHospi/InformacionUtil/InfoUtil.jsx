@@ -1,0 +1,102 @@
+import {
+  Typography,
+  Tabs,
+  TabsHeader,
+  TabsBody,
+  Tab,
+  TabPanel,
+} from "@material-tailwind/react";
+import { Helmet } from "react-helmet";
+import Horarios from "../../../Components/Vosyelhospital/Info util/Horarios";
+import Guardia from "../../../Components/Vosyelhospital/Info util/Guardia";
+
+const InfoUtil = () => {
+  const data = [
+    {
+      label: "Horarios",
+      value: "horarios",
+      component: <Horarios/>,
+    },
+    {
+      label: "Guardia",
+      value: "guardia",
+      component: <Guardia />,
+    },
+    {
+      label: "Servicios y especialidades",
+      value: "serviciosyespecialidades",
+      component: "",
+    },
+    {
+      label: "Obras Sociales",
+      value: "obrasSociales",
+      component: "",
+    },
+    {
+      label: "Formas de Pago, costos y autorizaciones",
+      value: "formasDePago",
+      component: "",
+    },
+    {
+      label: "Atención, documentacion y trámites",
+      value: "documentacion",
+      component: "",
+    },
+    {
+      label: "Nuestras Comodidades",
+      value: "comodidades",
+      component: "",
+    },
+    {
+      label: "Normas de Convivencia",
+      value: "normas",
+      component: "",
+    },
+  
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Informacion Util | Hospital Italiano La Plata</title>
+        <meta
+          name="description"
+          content="Aca encontraras todo lo que necesitas como paciente, como horarios, y tus derechos"
+        />
+      </Helmet>
+      <div className="mx-auto max-w-screen-2xl">
+        <Typography
+          variant="h2"
+          color="green"
+          className="py-5 text-center"
+          textGradient
+        >
+          Informacion Util
+        </Typography>
+        <Tabs value="horarios" orientation="vertical" className="flex-col md:flex-row">
+          <TabsHeader
+            className="w-screen md:w-72 divide-y"
+            indicatorProps={{
+              className: "bg-green-500/40 shadow-none z-0",
+            }}
+          >
+            {data.map(({ label, value }) => (
+              <Tab key={value} value={value} className="justify-start text-left z-0">
+                {label}
+              </Tab>
+            ))}
+          </TabsHeader>
+          <TabsBody>
+            {data.map(({ value, component }) => (
+              <TabPanel key={value} value={value} className="py-0">
+                {component}
+              </TabPanel>
+            ))}
+          </TabsBody>
+        </Tabs>
+      </div>
+    </>
+  );
+};
+
+export default InfoUtil;

@@ -3,8 +3,8 @@ import { AiOutlineUsergroupAdd } from "react-icons/ai";
 
 const BannerSumate = () => {
   return (
-    <section className="max-w-screen-2xl mx-auto mt-10 py-5 bg-gradient-to-r from-gray-300 to-gray-600 sm:rounded-xl">
-      <div className="flex flex-wrap justify-center gap-2 items-center lg:gap-16 p-1">
+    <article className="max-w-screen-2xl mx-auto mt-10 py-5 bg-gradient-to-r from-gray-300 to-gray-600 sm:rounded-xl">
+      <section className="flex flex-wrap justify-center gap-2 items-center lg:gap-16 p-1">
         <Typography variant="h5" color="blue-gray" className="text-center flex gap-4 items-center">
           <AiOutlineUsergroupAdd size={32} className="hidden md:block"/> ¿Quéres ser parte de nuestro Hospital? ¡SUMATE AL EQUIPO!
         </Typography>
@@ -34,8 +34,8 @@ const BannerSumate = () => {
           </span>
           <span className="relative invisible">Envianos tu CV</span>
         </a>
-      </div>
-    </section>
+      </section>
+    </article>
   );
 };
 

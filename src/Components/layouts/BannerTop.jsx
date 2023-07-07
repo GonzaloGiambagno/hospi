@@ -27,7 +27,7 @@ const InstagramLogo = () => {
 
 const BannerTop = () => {
   return (
-    <div className="hidden sm:flex flex-ro justify-between mx-auto max-w-screen-2xl p-1 shadow-lg border-b border-b-1 border-gray-300 bg-white">
+    <header className="hidden sm:flex flex-ro justify-between mx-auto max-w-screen-2xl p-1 shadow-lg border-b border-b-1 border-gray-300 bg-white">
       <div className="flex flex-row gap-2 items-center">
         <a href="https://www.facebook.com/italianolaplata" target="blank">
           <svg
@@ -79,7 +79,7 @@ const BannerTop = () => {
           </Button>
         </a>
       </div>
-    </div>
+    </header>
   );
 };
 

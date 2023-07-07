@@ -38,7 +38,7 @@ const contenidoCard = [
 
 export default function CardInicio() {
   return (
-    <section className="flex flex-row flex-wrap justify-center items-center gap-4 cards mt-2">
+    <article className="flex flex-row flex-wrap justify-center items-center gap-4 cards mt-2">
     {contenidoCard.map((card, index) => (
       <Card className="mt-5 w-96 shadow-xl bg-gray-50 card" key={index}>
         <CardBody>
@@ -68,6 +68,6 @@ export default function CardInicio() {
         </CardFooter>
       </Card>
     ))}
-  </section>
+  </article>
   );
 }

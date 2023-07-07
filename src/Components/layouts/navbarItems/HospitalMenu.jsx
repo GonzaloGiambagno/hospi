@@ -11,6 +11,7 @@ import {
 import { BsInfoCircle, BsFolder, BsChevronDown, BsChevronUp } from 'react-icons/bs';
 import { FaHospitalUser, FaRegHospital, FaUserInjured } from 'react-icons/fa6';
 import { HiOutlineDesktopComputer, HiOutlineNewspaper } from 'react-icons/hi';
+import { Link } from "react-router-dom";
 
 const colors = {
   blue: "bg-blue-50 text-blue-500",
@@ -29,18 +30,21 @@ const navListInicioItems = [
     icon: BsInfoCircle,
     title: "Informacion Util",
     description: "Informacion para el paciente",
+    linkTo: "/informacionUtil"
   },
   {
     color: "green",
     icon: HiOutlineDesktopComputer,
     title: "Portal del paciente",
     description: "Ingresa a tu Portal, podes ver tus estudios y citas",
+    linkTo: "/"
   },
   {
     color: "orange",
     icon: FaHospitalUser,
     title: "Especialidades",
     description: "Conoce nuestros servicios",
+    linkTo: "/"
   },
   {
     color: "teal",
@@ -53,12 +57,14 @@ const navListInicioItems = [
     icon: FaUserInjured,
     title: "ART",
     description: "Medicina Laboral",
+    linkTo: "/"
   },
   {
     color: "purple",
     icon: HiOutlineNewspaper,
     title: "Noticias",
     description: "Mira las ultimas noticias del hospital",
+    linkTo: "/"
   }
 ];
 
@@ -67,8 +73,8 @@ export function InicioListMenu() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const renderItems = navListInicioItems.map(
-    ({ icon, title, description, color }, key) => (
-      <a href="#" key={key}>
+    ({ icon, title, description, color, linkTo }, key) => (
+      <Link to={linkTo} key={key}>
         <MenuItem className="flex items-center gap-3 rounded-lg">
           <div className={`rounded-lg p-5 ${colors[color]}`}>
             {React.createElement(icon, {
@@ -89,7 +95,7 @@ export function InicioListMenu() {
             </Typography>
           </div>
         </MenuItem>
-      </a>
+      </Link>
     )
   );
 
