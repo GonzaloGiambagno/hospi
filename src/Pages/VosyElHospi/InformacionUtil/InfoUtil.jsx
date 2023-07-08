@@ -10,7 +10,8 @@ import { Helmet } from "react-helmet";
 import Horarios from "../../../Components/Vosyelhospital/InformacionUtil/Horarios";
 import Guardia from "../../../Components/Vosyelhospital/InformacionUtil/Guardia";
 import { useLocation, useNavigate } from 'react-router-dom';
-import ServiciosYEsp from "../../../Components/Vosyelhospital/InformacionUtil/ServiciosYEsp";
+import ServiciosYEsp from "../../../Components/Vosyelhospital/InformacionUtil/ServicioyEspecialidades/ServiciosYEsp";
+import ObrasSociales from "../../../Components/Vosyelhospital/InformacionUtil/ObrasSociales/ObrasSociales";
 
 const InfoUtil = () => {
   const data = [
@@ -32,7 +33,7 @@ const InfoUtil = () => {
     {
       label: "Obras Sociales",
       value: "obrasSociales",
-      component: "",
+      component: <ObrasSociales />,
     },
     {
       label: "Formas de Pago, costos y autorizaciones",

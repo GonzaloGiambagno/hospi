@@ -1,5 +1,6 @@
 import { Typography } from "@material-tailwind/react";
 import { AiOutlineCaretRight } from "react-icons/ai";
+import TablaEspecialidades from "./TablaEspecialidades";
 
 const ServiciosYEsp = () => {
   return (
@@ -22,6 +23,11 @@ const ServiciosYEsp = () => {
 
             </ul>
         </div>
+        <div className="flex flex-col gap-2 divide-y">
+          <Typography variant="lead" className="mt-2 divide-y">¿Qué especialidades médicas tiene el Hospital?</Typography>
+          <Typography className="pt-2">Las especialidades médicas que atendemos en el Hospital Italiano La Plata son:</Typography>
+        </div>
+        <TablaEspecialidades />
       </section>
     </article>
   );
