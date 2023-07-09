@@ -37,20 +37,21 @@ const navListInicioItems = [
     icon: HiOutlineDesktopComputer,
     title: "Portal del paciente",
     description: "Ingresa a tu Portal, podes ver tus estudios y citas",
-    linkTo: "/"
+    linkTo: "/vosyelhospital/portalDelPaciente"
   },
   {
     color: "orange",
     icon: FaHospitalUser,
-    title: "Especialidades",
-    description: "Conoce nuestros servicios",
-    linkTo: "/"
+    title: "Estudios y Procedimientos",
+    description: "Conoce los estudios y procedimientos que realizamos",
+    linkTo: "/vosyelhospital/estudiosyprocedimientos"
   },
   {
     color: "teal",
     icon: BsFolder,
     title: "Tus derechos",
     description: "Conocé tus derechos y responsabilidades",
+    linkTo: "/vosyelhospital/derechosyresponsabilidades"
   },
   {
     color: "red",

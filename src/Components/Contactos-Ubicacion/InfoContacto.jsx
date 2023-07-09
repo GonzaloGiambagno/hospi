@@ -1,9 +1,7 @@
 import {
   Card,
   CardBody,
-//   CardFooter,
   Typography,
-//   Button,
 } from "@material-tailwind/react";
 import { HiMail } from "react-icons/hi";
 import { BsHeadset } from "react-icons/bs";

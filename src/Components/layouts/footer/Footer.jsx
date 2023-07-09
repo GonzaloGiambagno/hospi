@@ -44,15 +44,15 @@ export default function Footer() {
             <div className="flex flex-wrap justify-around w-10/12 flex-col gap-2 md:flex-row">
               <div className="flex gap-2">
                 <BsFillPinMapFill size={22} />
-                <span className="select-all">Av. 51 Nº 1725 e/ 29 y 30</span>
+                <span className="select-all font-semibold">Av. 51 Nº 1725 e/ 29 y 30</span>
               </div>
               <div className="flex gap-2">
                 <BsFillTelephoneFill size={22} />
-                <span className="select-all">+54 221 512 9500</span>
+                <span className="select-all font-semibold">+54 221 512 9500</span>
               </div>
               <div className="flex gap-2">
                 <HiOutlineMail size={24} />
-                <span className="select-all">info@italianolaplata.org.ar</span>
+                <span className="select-all font-semibold">info@italianolaplata.org.ar</span>
               </div>
             </div>
           </CardHeader>

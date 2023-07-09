@@ -44,8 +44,8 @@ const Horarios = () => {
         <section className="md:px-4">
             {data.map(({ sector, horario }) => ( 
                 <div key={sector} className="flex flex-col gap-2 divide-y">
-                    <Typography variant="lead" className="mt-2">{sector}</Typography>
-                    <Typography className="pt-2">{horario}</Typography>
+                    <Typography variant="lead" className="mt-2" color="black">{sector}</Typography>
+                    <Typography className="pt-2 text-justify">{horario}</Typography>
                 </div>
         ))}
         </section>

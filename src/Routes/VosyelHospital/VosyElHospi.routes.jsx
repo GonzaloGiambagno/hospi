@@ -1,11 +1,17 @@
 import { Routes, Route} from 'react-router-dom';
-import InfoUtil from '../../Pages/VosyElHospi/InformacionUtil/InfoUtil.jsx'
+import InfoUtil from '../../Pages/VosyElHospi/InfoUtil.jsx'
+import PortalDelPaciente from '../../Pages/VosyElHospi/PortalDelPaciente.jsx';
+import Estudios from '../../Pages/VosyElHospi/Estudios.jsx';
+import Derechos from '../../Pages/VosyElHospi/Derechos.jsx';
 
 const VosYelHospiRoutes = () => {
   
     return (
       <Routes>
             <Route path="/informacionUtil" element={<InfoUtil />} />
+            <Route path="/portalDelPaciente" element={<PortalDelPaciente />} />
+            <Route path="/estudiosyprocedimientos" element={<Estudios />} />
+            <Route path="/derechosyresponsabilidades" element={<Derechos/>} />
       </Routes>
     );
   };

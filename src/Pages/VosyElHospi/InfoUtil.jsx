@@ -7,11 +7,14 @@ import {
   TabPanel,
 } from "@material-tailwind/react";
 import { Helmet } from "react-helmet";
-import Horarios from "../../../Components/Vosyelhospital/InformacionUtil/Horarios";
-import Guardia from "../../../Components/Vosyelhospital/InformacionUtil/Guardia";
+import Horarios from "../../Components/Vosyelhospital/InformacionUtil/Horarios";
+import Guardia from "../../Components/Vosyelhospital/InformacionUtil/Guardia";
 import { useLocation, useNavigate } from 'react-router-dom';
-import ServiciosYEsp from "../../../Components/Vosyelhospital/InformacionUtil/ServicioyEspecialidades/ServiciosYEsp";
-import ObrasSociales from "../../../Components/Vosyelhospital/InformacionUtil/ObrasSociales/ObrasSociales";
+import ServiciosYEsp from "../../Components/Vosyelhospital/InformacionUtil/ServicioyEspecialidades/ServiciosYEsp";
+import ObrasSociales from "../../Components/Vosyelhospital/InformacionUtil/ObrasSociales/ObrasSociales";
+import FormasdePago from "../../Components/Vosyelhospital/InformacionUtil/FormasdePago";
+import InfoInternacion from "../../Components/Vosyelhospital/InformacionUtil/DocumentacionyTramites/InfoInternacion";
+import Comodadidades from "../../Components/Vosyelhospital/InformacionUtil/Comodidades/Comodidades";
 
 const InfoUtil = () => {
   const data = [
@@ -38,24 +41,18 @@ const InfoUtil = () => {
     {
       label: "Formas de Pago, costos y autorizaciones",
       value: "formasDePago",
-      component: "",
+      component: <FormasdePago />,
     },
     {
       label: "Atención, documentacion y trámites",
       value: "documentacion",
-      component: "",
+      component: <InfoInternacion />,
     },
     {
       label: "Nuestras Comodidades",
       value: "comodidades",
-      component: "",
-    },
-    {
-      label: "Normas de Convivencia",
-      value: "normas",
-      component: "",
-    },
-  
+      component: <Comodadidades />,
+    }, 
   ];
   const location = useLocation();
   const navigate = useNavigate();

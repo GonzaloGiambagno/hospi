@@ -103,7 +103,7 @@ const TablaObrasSociales = () => {
               <th className="border-y border-blue-gray-100 bg-blue-gray-50/50 p-4 md:w-96">
                 <Typography
                   variant="small"
-                  color="blue-gray"
+                  color="black"
                   className="font-normal leading-none opacity-70"
                 >
                   Obras Sociales:

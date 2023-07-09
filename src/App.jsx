@@ -12,7 +12,7 @@ import VosYelHospiRoutes from "./Routes/VosyelHospital/VosyElHospi.routes";
 function App() {
 
   return (
-    <>
+    <div className="">
       <Helmet>
         <title>Hospital Italiano La Plata</title>
         <meta name="description" content="Hospital Italiano de La Plata. Tu salud Primero!" />
@@ -26,7 +26,7 @@ function App() {
         </Route>
         </Routes>
         <ScrollToTopButton />
-    </>
+    </div>
   )
 }
 

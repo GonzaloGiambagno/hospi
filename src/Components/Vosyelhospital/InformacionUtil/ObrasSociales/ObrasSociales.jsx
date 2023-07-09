@@ -9,8 +9,8 @@ const ObrasSociales = () => {
       </Typography>
       <section className="md:px-4">
         <div className="flex flex-col gap-2 divide-y">
-          <Typography variant="lead" className="mt-2 divide-y">¿Qué obras sociales atienden?</Typography>
-          <Typography className="pt-2">Las obras sociales que atendemos en el Hospital Italiano La Plata son:</Typography>
+          <Typography  color="black" variant="lead" className="mt-2 divide-y">¿Qué obras sociales atienden?</Typography>
+          <Typography  className="pt-2">Las obras sociales que atendemos en el Hospital Italiano La Plata son:</Typography>
         </div>
         <TablaObrasSociales />
       </section>

@@ -10,7 +10,7 @@ const ServiciosYEsp = () => {
       </Typography>
       <section className="md:px-4">
         <div className="flex flex-col gap-2 divide-y">
-          <Typography variant="lead" className="mt-2 divide-y">¿Qué prestaciones ofrece el Hospital Italiano La Plata?</Typography>
+          <Typography color="black" variant="lead" className="mt-2 divide-y">¿Qué prestaciones ofrece el Hospital Italiano La Plata?</Typography>
           <Typography className="pt-2">El Hospital Italiano La Plata ofrece las siguientes prestaciones:</Typography>
         </div>
         <div className="p-4 ">
@@ -24,7 +24,7 @@ const ServiciosYEsp = () => {
             </ul>
         </div>
         <div className="flex flex-col gap-2 divide-y">
-          <Typography variant="lead" className="mt-2 divide-y">¿Qué especialidades médicas tiene el Hospital?</Typography>
+          <Typography color="black" variant="lead" className="mt-2 divide-y">¿Qué especialidades médicas tiene el Hospital?</Typography>
           <Typography className="pt-2">Las especialidades médicas que atendemos en el Hospital Italiano La Plata son:</Typography>
         </div>
         <TablaEspecialidades />
