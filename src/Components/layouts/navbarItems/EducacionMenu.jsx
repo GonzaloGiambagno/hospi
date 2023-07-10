@@ -59,11 +59,14 @@ const navListEducacionItems = [
 export function EducacionListMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const handleMobileMenuItemClick = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   const renderItems = navListEducacionItems.map(
     ({ icon, title, description, color, linkTo }, key) => (
       <Link to={linkTo} key={key}>
-        <MenuItem className="flex items-center gap-3 rounded-lg">
+        <MenuItem className="flex items-center gap-3 rounded-lg" onClick={handleMobileMenuItemClick}>
           <div className={`rounded-lg p-5 ${colors[color]}`}>
             {React.createElement(icon, {
               strokeWidth: 1,

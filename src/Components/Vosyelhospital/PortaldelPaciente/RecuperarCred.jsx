@@ -12,7 +12,7 @@ const RecuperarCred = () => {
           <div className="bg-gray-100 shadow-sm rounded-xl w-96 p-2">
             <Typography className="flex gap-2 font-semibold p-2"><RiUserSettingsLine size={24} color="green" />Recuperar Usuario</Typography>
             <Typography className="p-2">
-            Si no recordás el email con el que te registraste, por favor comunicate telefónica con el área de Orientación al Paciente para poder solicitar el reingreso. <br />
+            Si no recordás el email con el que te registraste, por favor comunicate con el área de Orientación al Paciente para poder solicitar el reingreso. <br />
             </Typography>
           </div>
           <div className="bg-gray-100 shadow-sm rounded-xl w-96 p-2">
