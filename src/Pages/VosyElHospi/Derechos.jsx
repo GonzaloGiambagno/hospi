@@ -1,11 +1,13 @@
 import { Typography } from "@material-tailwind/react";
 import { Helmet } from "react-helmet";
 import DerechosComp from "../../Components/Vosyelhospital/DerechosyResp/DerechosComp";
-import Responsabilidades from "../../Components/Vosyelhospital/DerechosyResp/Responsabilidades";
+import Responsabilidades from "../../Components/Vosyelhospital/DerechosyResp/Responsabilidades"
+import OpacityAnimated from "../../helpers/OpacityAnimated";
+
 
 const Derechos = () => {
   return (
-    <>
+    <OpacityAnimated>
       <Helmet>
         <title>Derechos y Responsabilidades | Hospital Italiano La Plata</title>
         <meta
@@ -32,7 +34,7 @@ const Derechos = () => {
         <DerechosComp />
         <Responsabilidades />
       </article>
-    </>
+    </OpacityAnimated>
   );
 };
 

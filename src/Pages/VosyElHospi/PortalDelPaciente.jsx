@@ -3,10 +3,11 @@ import { Helmet } from "react-helmet";
 import ImagenPortal from "../../Components/Vosyelhospital/PortaldelPaciente/ImagenPortal";
 import InfoPortal from "../../Components/Vosyelhospital/PortaldelPaciente/InfoPortal";
 import RecuperarCred from "../../Components/Vosyelhospital/PortaldelPaciente/RecuperarCred";
+import OpacityAnimated from "../../helpers/OpacityAnimated";
 
 const PortalDelPaciente = () => {
   return (
-    <>
+    <OpacityAnimated>
       <Helmet>
         <title>Portal del paciente | Hospital Italiano La Plata</title>
         <meta
@@ -24,7 +25,7 @@ const PortalDelPaciente = () => {
             <RecuperarCred />
         </article>
       </div>
-    </>
+    </OpacityAnimated>
   );
 };
 

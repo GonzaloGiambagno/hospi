@@ -3,12 +3,14 @@ import { Helmet } from "react-helmet";
 import InfoART from '../../Components/Vosyelhospital/ART/InfoArt';
 // import PlantillasArt from '../../Components/Vosyelhospital/ART/PlantillasArt';
 import ContactosArt from '../../Components/Vosyelhospital/ART/ContactosArt';
+import OpacityAnimated from "../../helpers/OpacityAnimated";
+
 
 
 
 const Derechos = () => {
   return (
-    <>
+    <OpacityAnimated>
       <Helmet>
         <title>Pacientes de ART | Hospital Italiano La Plata</title>
         <meta
@@ -37,7 +39,7 @@ const Derechos = () => {
             <ContactosArt />
         </section>
       </article>
-    </>
+    </OpacityAnimated>
   );
 };
 

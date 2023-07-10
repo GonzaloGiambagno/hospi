@@ -27,13 +27,13 @@ const colors = {
   red: "bg-red-50 text-red-500",
 };
 
-const navListConocenosItems = [
+const navListConocenosItems = [ 
   {
     color: "blue",
     icon: FcAbout,
     title: "Quienes somos",
     description: "Queremos que nos conozcas",
-    linkTo: "/"
+    linkTo: "/conocenos/quienesSomos"
   },
   {
     color: "green",

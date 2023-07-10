@@ -1,4 +1,4 @@
-import BannerCovid from "../Components/Inicio/BannerCovid";
+// import BannerCovid from "../Components/Inicio/BannerCovid";
 import BannerSumate from "../Components/Inicio/BannerSumate";
 import CardInicio from "../Components/Inicio/CardInicio";
 import Estadisticas from "../Components/Inicio/Estadisticas";
@@ -21,16 +21,16 @@ const Inicio = () => {
       <ScrollAnimated>
         <CardInicio />
       </ScrollAnimated>
-      <ScrollAnimated>
+      {/* <ScrollAnimated>
         <BannerCovid />
+      </ScrollAnimated> */}
+      <ScrollAnimated>
+        <BannerSumate />
       </ScrollAnimated>
       <ScrollAnimated>
         <NewsCarrusel />
       </ScrollAnimated>
 
-      <ScrollAnimated>
-        <BannerSumate />
-      </ScrollAnimated>
 
       <ScrollAnimated>
         <Typography variant="h4" color="green" className="p-5">

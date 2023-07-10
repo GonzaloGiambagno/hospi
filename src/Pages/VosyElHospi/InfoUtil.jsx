@@ -15,6 +15,8 @@ import ObrasSociales from "../../Components/Vosyelhospital/InformacionUtil/Obras
 import FormasdePago from "../../Components/Vosyelhospital/InformacionUtil/FormasdePago";
 import InfoInternacion from "../../Components/Vosyelhospital/InformacionUtil/DocumentacionyTramites/InfoInternacion";
 import Comodadidades from "../../Components/Vosyelhospital/InformacionUtil/Comodidades/Comodidades";
+import OpacityAnimated from "../../helpers/OpacityAnimated";
+
 
 const InfoUtil = () => {
   const data = [
@@ -67,7 +69,7 @@ const InfoUtil = () => {
 
   
   return (
-    <>
+    <OpacityAnimated>
       <Helmet>
         <title>Informacion Util | Hospital Italiano La Plata</title>
         <meta
@@ -106,7 +108,7 @@ const InfoUtil = () => {
           </TabsBody>
         </Tabs>
       </div>
-    </>
+    </OpacityAnimated>
   );
 };
 

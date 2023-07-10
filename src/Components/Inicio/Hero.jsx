@@ -68,10 +68,13 @@ const Hero = () => {
                   <p className="card__description">
                     ¡Saca turno de manera facil!
                   </p>
+                  <a href="https://portal.italianolaplata.org.ar/Cuenta/Loginhttps://portal.italianolaplata.org.ar/Cuenta/Login" target="blank">
                   <Button variant="text" className="flex items-center gap-2" size="sm" color="green">
                     Ver mas
                     <ArrowLongRightIcon strokeWidth={2} className="h-5 w-5" />
                   </Button>
+                  </a>
+
                 </div>
               </div>
             </div>
@@ -86,10 +89,12 @@ const Hero = () => {
                 <p className="card__description">
                   Inscripciones 2023 Abiertas!
                 </p>
+                <a href="">
                 <Button variant="text" className="flex items-center gap-0.5" size="sm" color="green">
                   Ver mas
                   <ArrowLongRightIcon strokeWidth={2} className="h-5 w-5" />
                 </Button>
+                </a>
               </div>
             </div>
           </section>
