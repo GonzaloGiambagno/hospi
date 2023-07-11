@@ -61,14 +61,14 @@ const navListConocenosItems = [
     icon: FaChurch,
     title: "Espiritualidad",
     description: "Nuestra conexión con la Fe",
-    linkTo: "/"
+    linkTo: "/conocenos/espiritualidad"
   },
   {
     color: "orange",
     icon: BsBuildings,
     title: "Plan Maestro",
     description: "Reorganización funcional",
-    linkTo: "/"
+    linkTo: "/conocenos/planmaestro"
   },
 ];
 

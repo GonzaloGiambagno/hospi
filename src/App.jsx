@@ -7,6 +7,7 @@ import Contactos from "./Pages/Contactos";
 import Layout from "./Pages/Layouts";
 import VosYelHospiRoutes from "./Routes/VosyelHospital/VosyElHospi.routes";
 import ConocenosRoutes from "./Routes/Conocemos/Conocenos.routes";
+import InvolucrateRoutes from "./Routes/Involucrate/Involucrate.router";
 
 
 
@@ -23,6 +24,7 @@ function App() {
           <Route index element={<Inicio />} />
           <Route path="/vosyelhospital/*" element={<VosYelHospiRoutes />} />
           <Route path="/conocenos/*" element={<ConocenosRoutes />} />
+          <Route path="/involucrate/*" element={<InvolucrateRoutes />} />
           <Route path="/contactos" element={<Contactos />} />
           <Route path="*" element={<Inicio />} />
         </Route>

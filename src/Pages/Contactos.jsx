@@ -12,11 +12,11 @@ const Contactos = () => {
         <title>Contactos | Hospital Italiano La Plata</title>
         <meta name="description" content="Contactate con el hospital y encontranos, ¡no dudes en consultar¡" />
       </Helmet>
-    <div className="mx-auto max-w-screen-2xl">
+    <div className="mx-auto max-w-screen-2xl p-4">
       <Typography
-        variant="h2"
+        variant="h3"
         color="green"
-        className="py-4 text-center"
+        className="mb-3"
         textGradient
       >
         Contactos

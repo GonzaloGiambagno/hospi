@@ -20,19 +20,24 @@ const Laboratorio = () => {
         <div className="flex items-center gap-2">
           <BsTelephone color="green" size={20} />
           <Typography>
-            Secretaría Laboratorio || Horario de atención: de 10 a 19 hs. Int. 238.
+            Secretaría Laboratorio || Horario de atención: de 10 a 19 hs. Int.
+            238.
           </Typography>
         </div>
         <div className="p-4">
-          <ul className="flex flex-col gap-3">
-            <ListItem text="Química Clínica." />
-            <ListItem text="Endocrinología/Marcadores Tumorales." />
-            <ListItem text="Inmunología." />
-            <ListItem text="Hematología/Hemostasia." />
-            <ListItem text="Microbiología." />
-            <ListItem text="Medio Interno." />
-            <ListItem text="Proteínas séricas." />
-            <ListItem text="Biología Molecular." />
+          <ul className="flex flex-row flex-wrap md:gap-10">
+            <div>
+              <ListItem text="Química Clínica." />
+              <ListItem text="Endocrinología/Marcadores Tumorales." />
+              <ListItem text="Inmunología." />
+              <ListItem text="Hematología/Hemostasia." />
+            </div>
+            <div>
+              <ListItem text="Microbiología." />
+              <ListItem text="Medio Interno." />
+              <ListItem text="Proteínas séricas." />
+              <ListItem text="Biología Molecular." />
+            </div>
           </ul>
         </div>
       </section>

@@ -42,8 +42,8 @@ const DerechosComp = () => {
 
   return (
     <section className='w-full mt-2'>
-        <Typography variant="h5" color="black" className="p-2">Conocé tus derechos como paciente</Typography>
-        <div className="p-2">
+        <Typography variant="h5" color="black">Conocé tus derechos como paciente</Typography>
+        <div>
           {derechosData.map(({ titulo, descripcion, descripcion2, descripcion3, descripcion4 }) => ( 
             <div key={titulo} className="flex flex-col">
                 <Typography variant="h6" className="mt-2" color="black">{titulo}</Typography>

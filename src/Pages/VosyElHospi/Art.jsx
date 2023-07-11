@@ -18,11 +18,11 @@ const Derechos = () => {
           content="Que hacer en caso de Accidente laboral, descarga las plantillas de denuncia"
         />
       </Helmet>
-      <article className="mx-auto max-w-screen-2xl">
+      <article className="mx-auto max-w-screen-2xl p-4">
         <Typography
           variant="h3"
           color="green"
-          className="py-5 text-center sm:text-left"
+          className="text-center sm:text-left"
           textGradient
         >
           ART - Medicina Laboral
@@ -31,7 +31,7 @@ const Derechos = () => {
           Lo que tenés que saber
         </Typography>
         
-        <section className="md:px-4">
+        <section className="">
             <div className="mt-4 flex flex-wrap border-b-2 border-green-300 pb-2 divide-x">
               <InfoART  className="md:grow-1"/>
               {/* <PlantillasArt/> */}

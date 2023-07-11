@@ -15,16 +15,16 @@ const Derechos = () => {
           content="Conocé tus derechos y tus responsabilidades como paciente"
         />
       </Helmet>
-      <article className="mx-auto max-w-screen-2xl">
+      <article className="mx-auto max-w-screen-2xl p-4">
         <Typography
           variant="h3"
           color="green"
-          className="py-5 text-center sm:text-left"
+          className="mb-3 text-center sm:text-left"
           textGradient
         >
           Derechos y responsabilidades
         </Typography>
-        <Typography className="px-2">
+        <Typography className="">
           Como paciente de cualquier centro de salud tenes ciertos derechos y
           responsabilidades. Que los conozcas es importante para que puedas
           exigirlos y cumplirlas, que trabajemos en conjunto para lograrlo es

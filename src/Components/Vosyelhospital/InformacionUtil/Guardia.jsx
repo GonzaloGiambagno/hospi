@@ -45,7 +45,7 @@ const Guardia = () => {
                     <AiOutlineCaretRight className="text-yellow-700" /><span>Amarillo: Prioridad 2</span>
                   </Typography>
                   <Typography>
-                  Pacientes con afecciones graves o incapacitantes. Posibles complicaciones. Tiempo de espera: aproximadamente 20 minutos.
+                    Pacientes con afecciones graves o incapacitantes. Posibles complicaciones. Tiempo de espera: aproximadamente 20 minutos.
                   </Typography>
                   <Typography variant="lead" color="black"className="my-2 flex items-center">
                     <AiOutlineCaretRight color="green" /><span>Verde: Prioridad 3</span>

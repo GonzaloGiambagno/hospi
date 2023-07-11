@@ -58,7 +58,7 @@ const SocialLink = ({ icon, href  }) => (
 const Footer = () => {
   return (
     <div className="relative bottom-0 w-full">
-      <div className="mx-auto w-full max-w-screen-2xl mt-10 px-5 rounded-t-2xl">
+      <div className="mx-auto w-full max-w-screen-2xl mt-5 rounded-t-2xl">
         <div className="flex justify-center">
           <CardHeader
             variant="gradient"

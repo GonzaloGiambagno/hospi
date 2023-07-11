@@ -13,8 +13,8 @@ const Calidad = () => {
           content="Calidad en salud, mejora de procesos para los pacientes y sus familias."
         />
       </Helmet>
-      <div className="mx-auto max-w-screen-2xl px-6 lg:p-0">
-        <Typography variant="h3" color="green" className="py-4" textGradient>
+      <div className="mx-auto max-w-screen-2xl p-4">
+        <Typography variant="h3" color="green" className="mb-3" textGradient>
             Calidad en la salud
         </Typography>
         <Typography className="text-justify">

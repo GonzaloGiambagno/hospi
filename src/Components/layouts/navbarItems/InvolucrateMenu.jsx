@@ -30,7 +30,7 @@ const navListInvolucrateItems = [
     icon: BiDonateBlood,
     title: "Doná sangre y/o tejidos",
     description: "Salvá vidas, Tu aporte es importante!",
-    linkTo: "/"
+    linkTo: "/involucrate/donacion"
   },
   {
     color: "green",

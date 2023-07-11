@@ -73,22 +73,22 @@ const Estudios = () => {
           content="Conoce todos los estudios y procedimientos que realizamos en el hospital italiano"
         />
       </Helmet>
-      <main className="mx-auto max-w-screen-2xl">
+      <main className="mx-auto max-w-screen-2xl p-4">
         <Typography
           variant="h3"
           color="green"
-          className="py-5 text-center sm:text-left"
+          className="mb-3 text-center sm:text-left"
           textGradient
         >
           Estudios y procedimientos
         </Typography>
-        <Typography className="p-2">
+        <Typography className="">
           En el Hospital Italiano contamos con los siguientes procedimientos
           generales, si queres consultar por algún procedimiento que no se
           encuentre en esta lista, podes hacerlo comunicándote a nuestra central
           de turnos, llamando al 512 9500.
         </Typography>
-        <div className="w-full p-4">
+        <div className="w-full mt-5">
         <Tabs value={selectedTab || 'laboratorio'}  orientation="vertical" className="flex-col md:flex-row">
           <TabsHeader
             className="w-screen md:w-72 divide-y"

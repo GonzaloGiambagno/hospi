@@ -6,10 +6,10 @@ import { BsTelephone } from "react-icons/bs";
 const ListItem = ({ text, variant = '', additionalText = '' }) => (
   <li className="flex md:flex-row md:items-start gap-2">
     <AiOutlineCaretRight color="green" />
-    <div className="flex flex-col md:flex-row gap-2 md:items-center">
+    <div className="flex flex-col md:flex-col md:items-start">
       <Typography>{text}</Typography>
       {variant && additionalText && (
-        <Typography variant={variant}>{"-  "}{additionalText}</Typography>
+        <Typography variant={variant}>{additionalText}</Typography>
       )}
     </div>
   </li>
@@ -29,37 +29,41 @@ const DiagnosticoImagen = () => {
           </Typography>
         </div>
         <div className="p-4">
-          <ul className="flex flex-col gap-3">
+          <div className="flex flex-row flex-wrap md:gap-10">
+            <div className="w-1/2">
             <ListItem
               text="Tomografía."
               variant="small"
-              additionalText="Tomografía || Horario de atención: de 8 a 20 hs. - Int. 622 / 627."
+              additionalText="Horario de atención: de 8 a 20 hs. - Int. 622 / 627."
             />
             <ListItem
               text="Ecografía Obstétrica."
               variant="small"
-              additionalText="Centro de la Mujer || Horario de atención: de 8 a 20 hs. - Int. 435."
+              additionalText="Horario de atención: de 8 a 20 hs. - Int. 435."
             />
             <ListItem text="Ecografía." />
             <ListItem text="Mamografía." />
             <ListItem text="Densitometría." />
+            </div>
+            <div>
             <ListItem text="Radiología." />
             <ListItem
               text="Resonancia Magnética"
               variant="small"
-              additionalText="Resonancia Magnética || Horario de atención: de 8 a 20 hs. - Int. 600."
+              additionalText="Horario de atención: de 8 a 20 hs. - Int. 600."
             />
             <ListItem
               text="Medicina Nuclear"
               variant="small"
-              additionalText="Medicina Nuclear || Horario de atención: de 08 a 20 hs. - Int 494."
+              additionalText="Horario de atención: de 08 a 20 hs. - Int 494."
             />
             <ListItem
               text="Ecocardiografía"
               variant="small"
-              additionalText="Ecodoppler Cardiovascular y Arterial || Horario de atención: de 08.30 a 18 hs. - Int. 252."
+              additionalText="Horario de atención: de 08.30 a 18 hs. - Int. 252."
             />
-          </ul>
+            </div>
+          </div>
         </div>
       </section>
     </article>

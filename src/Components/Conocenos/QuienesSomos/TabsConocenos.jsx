@@ -51,7 +51,7 @@ const TabsConocenos = () => {
     navigate(url.search, { replace: true });
   };
   return (
-    <section className="w-full md:p-4">
+    <section className="w-full md:py-4">
       <Tabs
         value={selectedTab || "mision"}
         orientation="vertical"

@@ -15,11 +15,11 @@ const ListItem = ({ text }) => (
 const Responsabilidades = () => {
   return (
     <article className="w-full mt-2">
-      <Typography variant="h4" color="gray" className="px-4 mb-4">
+      <Typography variant="h4" color="gray" className="mb-4">
         Conocé tus responsabilidades como paciente
       </Typography>
-      <section className="md:px-4">
-        <div className="p-4">
+      <section className="md:px-2">
+        <div>
           <ul className="flex flex-col gap-2 justify-start">
             <ListItem text="Ser considerado con otros pacientes y con el personal, y ayudar a controlar el ruido y otras distracciones." />
             <ListItem text="Respetar la propiedad de terceros y del establecimiento." />

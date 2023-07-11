@@ -11,11 +11,11 @@ const ListItem = ({ children }) => (
 
 const NuevoConcepto = () => {
   return (
-    <section className="px-4 mt-5">
-      <Typography variant="h4" color="gray" className="px-4">
+    <section className="mt-5">
+      <Typography variant="h4" color="gray">
         Un nuevo concepto de medicina hospitalaria
       </Typography>
-      <div className="p-4">
+      <div className="mt-3">
         <Typography className="text-justify">
           En el sistema de salud podemos distinguir tres niveles de gestión
           estrechamente relacionados. En primer lugar, la gestión sanitaria
