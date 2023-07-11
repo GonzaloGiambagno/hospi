@@ -13,7 +13,7 @@ import { AiOutlineCaretRight } from "react-icons/ai";
         },
         {
             servicio: "Maternidad:",
-            horarios: "de 11 a 12hs y de 17 a 19hs.",
+            horarios: "De 11 a 12hs y de 17 a 19hs.",
         },
         {
             servicio: "Trasplantes e inmunocomprometidos:",
@@ -21,11 +21,11 @@ import { AiOutlineCaretRight } from "react-icons/ai";
         },
         {
             servicio: "Unidad Coronaria ",
-            horarios: "de 11.30 a 12.30hs y de 20 a 20.30hs. Parte médico 11.30 hs.",
+            horarios: "De 11.30 a 12.30hs y de 20 a 20.30hs. Parte médico 11.30 hs.",
         },
         {
             servicio: "Unidad de Cuidados Intensivos Adultos (PB, 2° y 3° piso):",
-            horarios: "de 12 a 13hs y de 18 a 19 hs. Parte médico 12 hs.",
+            horarios: "De 12 a 13hs y de 18 a 19 hs. Parte médico 12 hs.",
         },
         {
             servicio: "Neonatología:",
@@ -40,9 +40,9 @@ import { AiOutlineCaretRight } from "react-icons/ai";
                 {horariosData.map(({ servicio, horarios }) => (
                     <div key={servicio}>
                         <Typography color="black" variant="paragraph" className="my-1 flex items-center font-bold">
-                            <AiOutlineCaretRight color="#5BB35F" />{servicio}
+                          <AiOutlineCaretRight color="#5BB35F"  className="md:flex w-6 flex-shrink-0"/>{servicio}
                         </Typography>
-                        <Typography>{horarios}</Typography>
+                        <Typography className="md:px-5">{horarios}</Typography>
                     </div>
                     ))}
             </div>

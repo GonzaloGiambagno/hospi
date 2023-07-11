@@ -33,7 +33,7 @@ const Inicio = () => {
 
 
       <ScrollAnimated>
-        <Typography variant="h4" color="green" className="p-5">
+        <Typography variant="h4" color="green" className="p-5 mt-5">
           Donde Estamos?
         </Typography>
         <Ubicacion />

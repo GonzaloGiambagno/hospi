@@ -14,8 +14,8 @@ import ServiciosYEsp from "../../Components/Vosyelhospital/InformacionUtil/Servi
 import ObrasSociales from "../../Components/Vosyelhospital/InformacionUtil/ObrasSociales/ObrasSociales";
 import FormasdePago from "../../Components/Vosyelhospital/InformacionUtil/FormasdePago";
 import InfoInternacion from "../../Components/Vosyelhospital/InformacionUtil/DocumentacionyTramites/InfoInternacion";
-import Comodadidades from "../../Components/Vosyelhospital/InformacionUtil/Comodidades/Comodidades";
 import OpacityAnimated from "../../helpers/OpacityAnimated";
+import Comodidades from "../../Components/Vosyelhospital/InformacionUtil/Comodidades/Comodidades";
 
 
 const InfoUtil = () => {
@@ -53,7 +53,7 @@ const InfoUtil = () => {
     {
       label: "Nuestras Comodidades",
       value: "comodidades",
-      component: <Comodadidades />,
+      component: <Comodidades />,
     }, 
   ];
   const location = useLocation();

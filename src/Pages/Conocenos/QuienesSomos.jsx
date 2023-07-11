@@ -1,7 +1,7 @@
 import { Typography } from "@material-tailwind/react";
 import OpacityAnimated from "../../helpers/OpacityAnimated";
 import { Helmet } from "react-helmet";
-import TabsConocenos from "../../Components/Conocenos/TabsConocenos";
+import TabsConocenos from "../../Components/Conocenos/QuienesSomos/TabsConocenos.jsx";
 
 const QuienesSomos = () => {
   return (
@@ -13,7 +13,7 @@ const QuienesSomos = () => {
           content="Conoce la historia de nuestro hospital"
         />
       </Helmet>
-      <div className="mx-auto max-w-screen-2xl">
+      <div className="mx-auto max-w-screen-2xl p-4 lg:p-0">
         <Typography variant="h3" color="green" className="py-4" textGradient>
           Queremos que nos conozcas
         </Typography>

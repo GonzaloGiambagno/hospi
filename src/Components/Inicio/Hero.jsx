@@ -4,13 +4,13 @@ import Imagen2 from "../../assets/portada2.jpg";
 import Imagen3 from "../../assets/portada3.png";
 import "./bgimage.css";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
- 
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
     <article className="h-full mx-auto rounded-br-xl">
-      <div className="bgimagen py-8 px-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-0.5 lg:py-20 ">
-        <section className="grid gap-10 lg:grid-cols-2 ">
+      <div className="bgimagen py-8 px-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-0.5 lg:py-20">
+        <section className="grid gap-10 lg:grid-cols-2">
           <div className="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
             <div className="max-w-2xl mb-6 flex flex-col gap-8">
               <div className="flex items-center">
@@ -29,52 +29,63 @@ const Hero = () => {
               </Typography>
             </div>
             <div className="flex">
-              <Button
-                variant="gradient"
-                className="rounded-full flex flex-end"
-                color="green"
-              >
-                Saber mas..
-              </Button>
+              <Link to="/conocenos/quienesSomos">
+                <Button
+                  variant="gradient"
+                  className="rounded-full flex flex-end"
+                  color="green"
+                >
+                  Saber más..
+                </Button>
+              </Link>
             </div>
           </div>
-          <section className="flex items-center justify-center -mx-4 lg:pl-8 ">
-            <div className="flex flex-col items-end px-3 ">
+          <section className="flex items-center justify-center -mx-4 lg:pl-8">
+            <div className="flex flex-col items-end px-3">
               <div className="cardcss mb-6">
                 <img
-                  className="object-cover rounded-xl shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56"
+                  className="object-cover rounded-xl shadow-lg h-auto w-48 sm:h-48 xl:h-56  sm:w-48 xl:w-56"
                   src={Imagen1}
                   alt=""
                 />
                 <div className="card__content rounded-xl flex flex-col gap-4 justify-center">
-                  <p className="card__title">Enfermeria</p>
+                  <p className="card__title">Enfermería</p>
                   <p className="card__description">
                     Preinscripciones a partir del 1° de Noviembre
                   </p>
-                  <Button variant="text" className="flex items-center gap-2" size="sm" color="green">
-                    Ver mas
+                  <Button
+                    variant="text"
+                    className="flex items-center gap-2"
+                    size="sm"
+                    color="green"
+                  >
+                    Ver más
                     <ArrowLongRightIcon strokeWidth={2} className="h-5 w-5" />
                   </Button>
                 </div>
               </div>
               <div className="cardcss">
                 <img
-                  className="object-cover w-28 h-24 rounded-xl shadow-lg sm:h-32 xl:h-48 sm:w-32 md:w-44 lg:w-48 xl:w-52"
+                  className="object-cover w-48 h-auto rounded-xl shadow-lg sm:h-32 xl:h-48 sm:w-32 md:w-44 lg:w-48 xl:w-52"
                   src={Imagen2}
                   alt=""
                 />
                 <div className="card__content rounded-xl flex flex-col gap-0.5 justify-center">
                   <p className="card__title">Nuevo Portal</p>
                   <p className="card__description">
-                    ¡Saca turno de manera facil!
+                    ¡Saca turno de manera fácil!
                   </p>
                   <a href="https://portal.italianolaplata.org.ar/Cuenta/Loginhttps://portal.italianolaplata.org.ar/Cuenta/Login" target="blank">
-                  <Button variant="text" className="flex items-center gap-2" size="sm" color="green">
-                    Ver mas
-                    <ArrowLongRightIcon strokeWidth={2} className="h-5 w-5" />
-                  </Button>
+                    <Button
+                      variant="text"
+                      className="flex items-center gap-2"
+                      size="sm"
+                      color="green"
+                    >
+                      Ver más
+                      <ArrowLongRightIcon strokeWidth={2} className="h-5 w-5" />
+                    </Button>
                   </a>
-
                 </div>
               </div>
             </div>
@@ -89,11 +100,16 @@ const Hero = () => {
                 <p className="card__description">
                   Inscripciones 2023 Abiertas!
                 </p>
-                <a href="">
-                <Button variant="text" className="flex items-center gap-0.5" size="sm" color="green">
-                  Ver mas
-                  <ArrowLongRightIcon strokeWidth={2} className="h-5 w-5" />
-                </Button>
+                <a href="#">
+                  <Button
+                    variant="text"
+                    className="flex items-center gap-0.5"
+                    size="sm"
+                    color="green"
+                  >
+                    Ver más
+                    <ArrowLongRightIcon strokeWidth={2} className="h-5 w-5" />
+                  </Button>
                 </a>
               </div>
             </div>

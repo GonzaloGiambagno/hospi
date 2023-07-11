@@ -57,7 +57,7 @@ export default function NewsCarrusel() {
   };
 
   return (
-    <article className="mx-auto max-w-screen-2xl mt-12">
+    <article className="mx-auto max-w-screen-2xl md:mt-12">
       <Typography variant="h4" color="green" className="mb-5">Ultimas Noticias</Typography>
       <Slider {...settings} >
           <img src={portada} alt="puerta hospital italiano" className="slick-image md:rounded-xl" />

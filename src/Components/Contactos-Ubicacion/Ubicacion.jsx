@@ -42,7 +42,7 @@ export default function Ubicacion() {
       <Tabs id="custom-animation" value="Hospital Italiano">
         <TabsHeader
           indicatorProps={{
-            className: "bg-green-500/80 rounded-xl",
+            className: "bg-green-500/80 rounded-xl h-auto",
           }}
           className="z-0"
         >

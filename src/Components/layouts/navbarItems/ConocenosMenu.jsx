@@ -40,21 +40,21 @@ const navListConocenosItems = [
     icon: GiHealthIncrease,
     title: "Gestión Hospitalaria",
     description: "Un nuevo concepto de medicina hospitalaria",
-    linkTo: "/"
+    linkTo: "/conocenos/gestion"
   },
   {
     color: "red",
     icon: HiUserGroup,
     title: "Autoridades",
     description: "Nuestro equipo de trabajo",
-    linkTo: "/"
+    linkTo: "/conocenos/autoridades"
   },
   {
     color: "teal",
     icon: MdOutlineHealthAndSafety,
     title: "Calidad y seguridad",
     description: "Calidad en la salud",
-    linkTo: "/"
+    linkTo: "/conocenos/calidadyseguridad"
   },
   {
     color: "cyan",

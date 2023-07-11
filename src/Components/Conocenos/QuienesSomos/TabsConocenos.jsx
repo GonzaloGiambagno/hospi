@@ -2,6 +2,10 @@ import { Tabs, TabsHeader, Tab, TabsBody,TabPanel } from "@material-tailwind/rea
 import { useNavigate, useLocation } from "react-router-dom";
 import Mision from "./Mision.jsx";
 import Vision from "./Vision.jsx";
+import Valores from "./Valores.jsx";
+import PoliticaCalidad from "./PoliticaCalidad.jsx";
+import PoliticaSeguridad from "./PoliticaSeguridad.jsx";
+import PoliticaAmbiental from "./PoliticaAmbiental.jsx";
 
 const TabsConocenos = () => {
   const data = [
@@ -18,22 +22,22 @@ const TabsConocenos = () => {
     {
       label: "Nuestros Valores",
       value: "valores",
-      component: "",
+      component: <Valores />,
     },
     {
       label: "Política de calidad",
       value: "calidad",
-      component: "",
+      component: <PoliticaCalidad />,
     },
     {
       label: "Política de seguridad de los pacientes",
       value: "seguridad",
-      component: "",
+      component: <PoliticaSeguridad />,
     },
     {
       label: "Política ambiental",
       value: "ambiental",
-      component: "",
+      component: <PoliticaAmbiental />,
     },
   ];
   const location = useLocation();
@@ -47,16 +51,16 @@ const TabsConocenos = () => {
     navigate(url.search, { replace: true });
   };
   return (
-    <section className="w-full p-4">
+    <section className="w-full md:p-4">
       <Tabs
         value={selectedTab || "mision"}
         orientation="vertical"
-        className="flex-col md:flex-row"
+        className="flex-col md:flex-row rounded-md"
       >
         <TabsHeader
           className="w-screen md:w-72 divide-y"
           indicatorProps={{
-            className: "bg-green-500/40 shadow-none z-0",
+            className: "bg-green-500/40 shadow-none z-0 rounded-md",
           }}
         >
           {data.map(({ label, value }) => (

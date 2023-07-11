@@ -10,7 +10,7 @@ import { FaSuitcaseMedical } from "react-icons/fa6";
 const InfoContacto = () => {
   return (
     <div>
-      <Card className="mt-6 w-full bg-gray-200">
+      <Card className="mt-6 w-full bg-gradient-to-r from-gray-200 to-gray-300">
         <CardBody>
           <Typography variant="h5" color="green" className="mb-2">
             Otros contactos y Telefonos Utiles
