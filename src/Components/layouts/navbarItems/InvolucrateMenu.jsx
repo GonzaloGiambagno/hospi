@@ -11,6 +11,7 @@ import {
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
 import { BiDonateHeart, BiDonateBlood } from 'react-icons/bi';
 import { GiThreeFriends } from 'react-icons/gi';
+import { AiOutlineComment } from 'react-icons/ai';
 import { Link } from "react-router-dom";
 
 const colors = {
@@ -33,11 +34,18 @@ const navListInvolucrateItems = [
     linkTo: "/involucrate/donacion"
   },
   {
+    color: "blue",
+    icon: AiOutlineComment,
+    title: "Da tu testimonio",
+    description: "¡Comparti con nosotros tu experiencia!",
+    linkTo: "/involucrate/testimonio"
+  },
+  {
     color: "green",
     icon: GiThreeFriends,
     title: "Nuestros Amigos",
     description: "¡Conocé nuestros amigos y benefactores!",
-    linkTo: "/"
+    linkTo: "/involucrate/amigosybenefactores"
   },
 ];
 
@@ -109,7 +117,7 @@ export function InvolucrateListMenu() {
           </Typography>
         </MenuHandler>
         <MenuList className="hidden max-w-screen-xl rounded-xl lg:block">
-          <ul className="grid grid-cols-2 gap-y-2 focus:outline-none hover:outline-none">{renderItems}</ul>
+          <ul className="grid grid-cols-3 gap-y-2 focus:outline-none hover:outline-none">{renderItems}</ul>
         </MenuList>
       </Menu>
       <div className="block lg:hidden">

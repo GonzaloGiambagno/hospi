@@ -77,7 +77,7 @@ const InfoUtil = () => {
           content="Aca encontraras todo lo que necesitas como paciente, como horarios, y tus derechos"
         />
       </Helmet>
-      <div className="mx-auto max-w-screen-2xl">
+      <div className="mx-auto max-w-screen-2xl p-4">
         <Typography
           variant="h2"
           color="green"

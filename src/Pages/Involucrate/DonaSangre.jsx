@@ -2,6 +2,7 @@ import { Typography } from "@material-tailwind/react";
 import { Helmet } from "react-helmet"
 import OpacityAnimated from "../../helpers/OpacityAnimated"
 import ImgDonacion from "../../Components/Involucrate/ImgDonacion";
+import DonaTiempo from "../../Components/Involucrate/DonaTiempo";
 
 
 
@@ -22,7 +23,7 @@ const DonaSangre = () => {
         Doná sangre y/o tejidos
       </Typography>
         <ImgDonacion />
-        
+        <DonaTiempo />
     </article>
     </OpacityAnimated>
   )

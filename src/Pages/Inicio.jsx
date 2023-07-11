@@ -11,7 +11,7 @@ import ScrollAnimated from "../helpers/ScrollAnimated";
 
 const Inicio = () => {
   return (
-    <main className="mx-auto max-w-screen-2xl">
+    <main className="mx-auto max-w-screen-2xl md:px-4">
       <ScrollAnimated>
         <Hero />
       </ScrollAnimated>
