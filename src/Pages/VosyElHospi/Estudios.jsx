@@ -88,7 +88,7 @@ const Estudios = () => {
           encuentre en esta lista, podes hacerlo comunicándote a nuestra central
           de turnos, llamando al 512 9500.
         </Typography>
-        <div className="w-full mt-5">
+        <div className="w-full mt-5 md:h-72" >
         <Tabs value={selectedTab || 'laboratorio'}  orientation="vertical" className="flex-col md:flex-row">
           <TabsHeader
             className="w-screen md:w-72 divide-y"

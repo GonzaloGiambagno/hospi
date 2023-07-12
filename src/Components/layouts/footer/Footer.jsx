@@ -14,23 +14,23 @@ import SocialIconTwitter from './SocialIconTwitter';
 const items = [
   {
     descripcion: "Guardia y Urgencias",
-    link: "",
+    link: "http://localhost:5173/vosyelhospital/informacionUtil?tab=guardia",
   },
   {
     descripcion: "Horarios",
-    link: "",
+    link: "http://localhost:5173/vosyelhospital/informacionUtil?tab=horarios",
   },
   {
     descripcion: "Trámites y documentación",
-    link: "",
+    link: "http://localhost:5173/vosyelhospital/informacionUtil?tab=documentacion",
   },
   {
     descripcion: "Fundación Hospital",
-    link: "",
+    link: "https://fundacion.italianolaplata.org.ar/",
   },
   {
     descripcion: "Trabaja con nosotros",
-    link: "",
+    link: "https://italianolaplata.hiringroom.com/jobs",
   },
 ];
 

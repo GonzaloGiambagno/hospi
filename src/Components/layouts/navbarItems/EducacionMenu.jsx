@@ -9,8 +9,9 @@ import {
   MenuItem,
 } from "@material-tailwind/react";
 import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
-import { FaChalkboardTeacher, FaUserGraduate } from 'react-icons/fa';
+import { FaChalkboardTeacher, FaUserGraduate, FaHospitalUser } from 'react-icons/fa';
 import { IoSchoolOutline, IoCalendarOutline } from 'react-icons/io5';
+import { LiaSchoolSolid } from 'react-icons/lia';
 import { GiHealing } from 'react-icons/gi';
 import { Link } from "react-router-dom";
 
@@ -31,28 +32,42 @@ const navListEducacionItems = [
     icon: FaChalkboardTeacher,
     title: "Docencia e Investigacion",
     description: "Nuestro compromiso por la comunidad",
-    linkTo: "/"
+    linkTo: "/educacion/docenciaeinvestigacion"
+  },
+  {
+    color: "orange",
+    icon: LiaSchoolSolid,
+    title: "Pregrado",
+    description: "¡Realiza con nosotros tus prácticas Profesionales!",
+    linkTo: "/educacion/pregrado"
   },
   {
     color: "blue",
     icon: FaUserGraduate,
-    title: "Formación profesional",
+    title: "Posgrado",
     description: "¡Realiza con nosotros tus prácticas Profesionales!",
-    linkTo: "/"
+    linkTo: "/educacion/posgrado"
+  },
+  {
+    color: "teal",
+    icon: FaHospitalUser,
+    title: "Rotaciones y visitas",
+    description: "Residencias y Fellowship",
+    linkTo: "/educacion/rotacionesyvisitas"
   },
   {
     color: "purple",
     icon: GiHealing,
     title: "Tecnicatura en Enfermería",
     description: "Estudiá con nosotros.",
-    linkTo: "/"
+    linkTo: "/tecnicaturaenfermeria"
   },
   {
     color: "cyan",
     icon: IoCalendarOutline,
     title: "Cursos y Jornadas",
     description: "Enterate sobre nuestras jornadas y talleres",
-    linkTo: "/"
+    linkTo: "/cursosyjornadas"
   },
 ];
 
@@ -124,7 +139,7 @@ export function EducacionListMenu() {
           </Typography>
         </MenuHandler>
         <MenuList className="hidden max-w-screen-xl rounded-xl lg:block">
-          <ul className="grid grid-cols-4 gap-y-2 focus:outline-none hover:outline-none">{renderItems}</ul>
+          <ul className="grid grid-cols-3 gap-y-2 focus:outline-none hover:outline-none">{renderItems}</ul>
         </MenuList>
       </Menu>
       <div className="block lg:hidden">
