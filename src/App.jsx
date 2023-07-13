@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import Inicio from "./Pages/Inicio";
 import ScrollToTopButton from "./Components/layouts/ScrollToTop";
 import Contactos from "./Pages/Contactos";
+import NotFound from "./Pages/NotFound.jsx";
 import Layout from "./Pages/Layouts";
 import VosYelHospiRoutes from "./Routes/VosyelHospital/VosyElHospi.routes";
 import ConocenosRoutes from "./Routes/Conocemos/Conocenos.routes";
@@ -28,7 +29,7 @@ function App() {
           <Route path="/conocenos/*" element={<ConocenosRoutes />} />
           <Route path="/involucrate/*" element={<InvolucrateRoutes />} />
           <Route path="/contactos" element={<Contactos />} />
-          <Route path="*" element={<Inicio />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
         </Routes>
         <ScrollToTopButton />
