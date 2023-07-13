@@ -14,11 +14,11 @@ const Pregrado = () => {
           content="Practicas profesionales en nuestro hosptital"
         />
       </Helmet>
-      <article className="mx-auto max-w-screen-2xl p-4">
-        <Typography variant="h3" color="green" className="mb-3" textGradient>
-          Formacion Profesional
+      <article className="mx-auto max-w-screen-2xl sm:p-4">
+        <Typography variant="h3" color="green" className="mb-3 p-4 sm:p-0" textGradient>
+          Pregrado
         </Typography>
-        <Typography>
+        <Typography className=" p-4 sm:p-0">
           El Hospital Italiano de La Plata es una de las Unidades Académicas que
           ofrece las Prácticas Obligatorias para carreras afines a la salud.
           Dichas prácticas consisten en la posibilidad de que el estudiante
@@ -27,7 +27,7 @@ const Pregrado = () => {
           estudios.
         </Typography>
         <TabsPracticas />
-        <ContactosDocencia />
+      <ContactosDocencia />
       </article>
     </OpacityAnimated>
   );

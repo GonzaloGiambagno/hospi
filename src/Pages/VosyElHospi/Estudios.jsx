@@ -73,16 +73,16 @@ const Estudios = () => {
           content="Conoce todos los estudios y procedimientos que realizamos en el hospital italiano"
         />
       </Helmet>
-      <main className="mx-auto max-w-screen-2xl p-4">
+      <main className="mx-auto max-w-screen-2xl">
         <Typography
           variant="h3"
           color="green"
-          className="mb-3 text-center sm:text-left"
+          className="my-3 text-center sm:text-left p-4 sm:p-0"
           textGradient
         >
           Estudios y procedimientos
         </Typography>
-        <Typography className="">
+        <Typography className="p-4 sm:p-0">
           En el Hospital Italiano contamos con los siguientes procedimientos
           generales, si queres consultar por algún procedimiento que no se
           encuentre en esta lista, podes hacerlo comunicándote a nuestra central

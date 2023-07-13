@@ -9,12 +9,12 @@ import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <article className="h-full mx-auto rounded-br-xl">
-      <div className="bgimagen py-8 px-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-0.5 lg:py-20">
+      <div className="bgimagen py-8 px-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-0.5 lg:pb-20">
         <section className="grid gap-10 lg:grid-cols-2">
           <div className="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
             <div className="max-w-2xl mb-6 flex flex-col gap-8">
               <div className="flex items-center">
-                <Typography variant="h1" color="blue-gray" textGradient>
+                <Typography variant="h1" color="gray">
                   Hospital Italiano
                 </Typography>
               </div>

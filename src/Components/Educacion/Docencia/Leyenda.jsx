@@ -3,7 +3,7 @@ import { Typography } from "@material-tailwind/react";
 const Leyenda = () => {
   return (
     <div className="bg-gradient-to-r from-green-100 to-green-300 w-full h-full rounded-2xl flex flex-col">
-      <Typography color="" className="text-center px-8 pt-6 font-semibold">
+      <Typography color="" className="text-center px-10 pt-6 font-semibold">
         “No es suficiente enseñar a los hombres una especialidad. Con ello se
         convierten en algo así como en máquinas utilizables, pero no en
         individuos válidos. Para ser un individuo válido el hombre debe sentir

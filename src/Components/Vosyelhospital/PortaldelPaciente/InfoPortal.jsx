@@ -12,7 +12,7 @@ const ListItem = ({ icon, text }) => (
 
 const InfoPortal = () => {
   return (
-    <section className="px-4">
+    <section className="">
       <div className="flex flex-col gap-2 mt-2 p-2 sm:p-0">
         <Typography variant="lead" className="mt-2" color="black">
           Ingreso al Portal
@@ -22,7 +22,7 @@ const InfoPortal = () => {
           tenés que:
         </Typography>
       </div>
-      <div className="p-4 w-full">
+      <div className="py-2 w-full">
         <ul className="flex flex-col flex-wrap gap-3">
           <ListItem
             icon={<AiOutlineCaretRight color="green" className="md:flex w-6 flex-shrink-0" />}
@@ -55,7 +55,7 @@ const InfoPortal = () => {
           ¿Qué podés hacer en el Portal?
         </Typography>
       </div>
-      <div className="p-4 w-full">
+      <div className="py-2 w-full">
         <ul className="flex flex-col flex-wrap gap-3">
           <ListItem
             icon={<AiOutlineCaretRight color="green" className="md:flex w-6 flex-shrink-0" />}

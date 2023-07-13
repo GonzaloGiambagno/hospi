@@ -18,7 +18,7 @@ const Derechos = () => {
           content="Que hacer en caso de Accidente laboral, descarga las plantillas de denuncia"
         />
       </Helmet>
-      <article className="mx-auto max-w-screen-2xl p-4">
+      <article className="mx-auto max-w-screen-2xl sm:p-4 mt-2 sm:mt-0">
         <Typography
           variant="h3"
           color="green"

@@ -19,11 +19,11 @@ const Autoridades = () => {
             content="Les presentamos las autoridades de nuestra institucion"
           />
         </Helmet>
-        <main className="mx-auto max-w-screen-2xl p-4">
+        <main className="mx-auto max-w-screen-2xl sm:p-4">
           <Typography variant="h4" color="green" className="text-center sm:text-left" textGradient>
             Autoridades
           </Typography>
-          <article className="px-4 md:px-0">
+          <article className="sm:px-4 md:px-0">
             <ConsejoDirectivo />
             <Consejeros />
             <Fiscalizadora />

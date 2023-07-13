@@ -12,7 +12,7 @@ const RecoveryOption = ({ icon, title, description }) => (
 
 const RecuperarCred = () => {
   return (
-    <section className="px-4">
+    <section className="sm:px-4">
       <div className="flex flex-col gap-2 mt-2 p-2 sm:p-0 border-t-2 border-green-300">
         <Typography variant="lead" className="mt-2">
           ¿Cómo recupero mis credenciales de ingreso?

@@ -15,11 +15,11 @@ const Espiritualidad = () => {
           content="Nuestra conexion con la fé - conoce horarios de culto "
         />
       </Helmet>
-      <div className="mx-auto max-w-screen-2xl px-4 lg:p-0">
-        <Typography variant="h3" color="green" className="p-4" textGradient>
+      <div className="mx-auto max-w-screen-2xl px-2 lg:p-0">
+        <Typography variant="h3" color="green" className="p-2" textGradient>
             Espiritualidad
         </Typography>
-        <section className="flex flex-col xl:flex-row px-4 gap-4">
+        <section className="flex flex-col xl:flex-row px-2 gap-4">
         <TextoEspiritualidad />
         <HorarioCulto />
         </section>

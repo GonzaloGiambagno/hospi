@@ -58,7 +58,7 @@ export default function StickyNavbar() {
       <BannerTop />
       <Navbar className="mx-auto max-w-screen-2xl px-4 py-2 sticky top-0 z-10 rounded-t-none">
         <div className="flex items-center justify-between text-blue-gray-900">
-          <Link to="/">
+          <Link to="/" aria-label="vuelva a la pagina de inicio">
             <LogoHeader />
           </Link>
           <div className="hidden lg:block">
@@ -69,10 +69,10 @@ export default function StickyNavbar() {
               <Button
                 variant="gradient"
                 size="sm"
-                className="flex items-center gap-2 rounded-full px-5"
+                className="flex items-center lg:gap-2 rounded-full lg:px-5"
                 color="green"
               >
-                <BsTelephone size={22} />
+              <BsTelephone size={20} className="hidden xl:block"/>
                 Contactanos
               </Button>
             </Link>
@@ -84,9 +84,9 @@ export default function StickyNavbar() {
             onClick={() => setOpenNav(!openNav)}
           >
             {openNav ? (
-              <XMarkIcon className="h-6 w-6" strokeWidth={2} />
+              <XMarkIcon className="h-6 w-6" strokeWidth={2} aria-label="close-menu-button" />
             ) : (
-              <Bars3Icon className="h-6 w-6" strokeWidth={2} />
+              <Bars3Icon className="h-6 w-6" strokeWidth={2} aria-label="open-menu-button" />
             )}
           </IconButton>
         </div>

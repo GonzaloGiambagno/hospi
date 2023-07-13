@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react';
 // import BannerCovid from "../Components/Inicio/BannerCovid";
 import BannerSumate from "../Components/Inicio/BannerSumate";
 import CardInicio from "../Components/Inicio/CardInicio";
@@ -5,9 +6,11 @@ import Estadisticas from "../Components/Inicio/Estadisticas";
 import Hero from "../Components/Inicio/Hero";
 // import InstagramCarrusel from "../Components/Inicio/InstagramCarrusel";
 import Ubicacion from "../Components/Contactos-Ubicacion/Ubicacion";
-import NewsCarrusel from "../Components/Inicio/newsCarrusel";
+// import NewsCarrusel from "../Components/Inicio/newsCarrusel";
 import { Typography } from "@material-tailwind/react";
 import ScrollAnimated from "../helpers/ScrollAnimated";
+
+const NewsCarrusel = lazy(() => import('../Components/Inicio/newsCarrusel'));
 
 const Inicio = () => {
   return (
@@ -28,7 +31,9 @@ const Inicio = () => {
         <BannerSumate />
       </ScrollAnimated>
       <ScrollAnimated>
-        <NewsCarrusel />
+        <Suspense fallback={<div>Cargando...</div>}>
+          <NewsCarrusel />
+        </Suspense>
       </ScrollAnimated>
 
 

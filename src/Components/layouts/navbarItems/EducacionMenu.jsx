@@ -45,14 +45,14 @@ const navListEducacionItems = [
     color: "blue",
     icon: FaUserGraduate,
     title: "Posgrado",
-    description: "¡Realiza con nosotros tus prácticas Profesionales!",
+    description: "¡Residencias y Fellowship!",
     linkTo: "/educacion/posgrado"
   },
   {
     color: "teal",
     icon: FaHospitalUser,
     title: "Rotaciones y visitas",
-    description: "Residencias y Fellowship",
+    description: "Conocé los requisitos y viví tu experiencia",
     linkTo: "/educacion/rotacionesyvisitas"
   },
   {
@@ -60,14 +60,14 @@ const navListEducacionItems = [
     icon: GiHealing,
     title: "Tecnicatura en Enfermería",
     description: "Estudiá con nosotros.",
-    linkTo: "/tecnicaturaenfermeria"
+    linkTo: "/educacion/enfermeria"
   },
   {
     color: "cyan",
     icon: IoCalendarOutline,
     title: "Cursos y Jornadas",
     description: "Enterate sobre nuestras jornadas y talleres",
-    linkTo: "/cursosyjornadas"
+    linkTo: "/educacion/cursosyjornadas"
   },
 ];
 

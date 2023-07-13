@@ -22,7 +22,6 @@ const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
       "slick-prev" +
       (currentSlide === 0 ? " slick-disabled" : "")
     }
-    aria-hidden="true"
     aria-disabled={currentSlide === 0 ? true : false}
     type="button"
   >
@@ -37,7 +36,6 @@ const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
       "slick-next " +
       (currentSlide === slideCount - 1 ? " slick-disabled" : "")
     }
-    aria-hidden="true"
     aria-disabled={currentSlide === slideCount - 1 ? true : false}
     type="button"
   >
@@ -60,14 +58,14 @@ export default function NewsCarrusel() {
     <article className="mx-auto max-w-screen-2xl md:mt-12">
       <Typography variant="h4" color="green" className="mb-5">Ultimas Noticias</Typography>
       <Slider {...settings} >
-          <img src={portada} alt="puerta hospital italiano" className="slick-image md:rounded-xl" />
-          <img src={añosHospi} alt="cumple 136 años hospi " className="slick-image md:rounded-xl" />
-          <img src={InnIoma} alt="Innauguracion centro traumatologico con ioma" className="slick-image md:rounded-xl" />
-          <img src={residencia} alt="Residencia, inscripciones" className="slick-image md:rounded-xl" />
-          <img src={premio} alt="premio responsabilidad social" className="slick-image md:rounded-xl" />
-          <img src={bannerpami} alt="firma convenio con pami" className="slick-image md:rounded-xl" />
-          <img src={convenioIoma} alt="convenio directo con IOMA" className="slick-image md:rounded-xl" />
-          <img src={enfermeria} alt="Iscripciones escuela de enfermeria" className="slick-image md:rounded-xl" />
+          <img src={portada} alt="puerta hospital italiano" className="slick-image md:rounded-xl" loading="lazy"/>
+          <img src={añosHospi} alt="cumple 136 años hospi " className="slick-image md:rounded-xl" loading="lazy"/>
+          <img src={InnIoma} alt="Innauguracion centro traumatologico con ioma" className="slick-image md:rounded-xl" loading="lazy"/>
+          <img src={residencia} alt="Residencia, inscripciones" className="slick-image md:rounded-xl" loading="lazy"/>
+          <img src={premio} alt="premio responsabilidad social" className="slick-image md:rounded-xl" loading="lazy"/>
+          <img src={bannerpami} alt="firma convenio con pami" className="slick-image md:rounded-xl" loading="lazy"/>
+          <img src={convenioIoma} alt="convenio directo con IOMA" className="slick-image md:rounded-xl" loading="lazy"/>
+          <img src={enfermeria} alt="Iscripciones escuela de enfermeria" className="slick-image md:rounded-xl" loading="lazy"/>
       </Slider>
     </article>
   );

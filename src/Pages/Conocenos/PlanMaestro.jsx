@@ -14,7 +14,7 @@ const PlanMaestro = () => {
           content="El Plan Maestro define una nueva organización funcional,Informate sobre nuestro proyecto"
         />
       </Helmet>
-      <div className="mx-auto max-w-screen-2xl p-4">
+      <div className="mx-auto max-w-screen-2xl p-4 ">
         <Typography variant="h3" color="green" className="mb-3" textGradient>
             Reorganización funcional
         </Typography>

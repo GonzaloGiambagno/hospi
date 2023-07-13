@@ -15,7 +15,7 @@ const PortalDelPaciente = () => {
           content="Descubri todas las funcionalidades del portal del paciente! Saca turno con nuestros profesionales y mira tus estudios realizados"
         />
       </Helmet>
-      <div className="mx-auto max-w-screen-2xl p-4">
+      <div className="mx-auto max-w-screen-2xl md:p-4 ">
         <Typography variant="h3" color="green" className="py-5 text-center sm:text-left" textGradient>
           Portal del paciente
         </Typography>
