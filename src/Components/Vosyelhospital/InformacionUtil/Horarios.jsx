@@ -27,7 +27,7 @@ const Horarios = () => {
         {
             sector: "Misas:",
             horario: ["- Lunes a sábados 7:00 hs.",
-            "Domingos 16:00 hs.",
+            "Jueves y Domingos 16:00 hs.",
             "Feriados 8:00 hs."],
         },
         {

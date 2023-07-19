@@ -10,6 +10,7 @@ import { BsClock } from "react-icons/bs";
 import { BiUser } from "react-icons/bi";
 import { FaSuitcaseMedical } from "react-icons/fa6";
 import "./cardcss.css"
+import { Link } from "react-router-dom";
 
 
 const contenidoCard = [
@@ -19,6 +20,7 @@ const contenidoCard = [
     descripcion:
       "Guardia: Todo el año las 24 hs. Atención ambulatoria: de lunes a viernes de 8 a 20hs. y sábados de 8 a 12hs.",
     btn: "Ver más",
+    link: "/vosyelhospital/informacionUtil?tab=horarios"
   },
   {
     icon: BiUser,
@@ -26,6 +28,7 @@ const contenidoCard = [
     descripcion:
       "Sacá turnos, mirá los resultados de tus últimos estudios y accedé a toda la información sobre tu salud.",
     btn: "Sacá turno",
+    link: "https://portal.italianolaplata.org.ar/Cuenta/Login"
   },
   {
     icon: FaSuitcaseMedical,
@@ -33,6 +36,7 @@ const contenidoCard = [
     descripcion:
       "Contamos con profesionales y especialidades para brindarte una atención integral y completa.",
     btn: "Conocelas",
+    link: "/vosyelhospital/informacionUtil?tab=serviciosyespecialidades"
   },
 ];
 
@@ -53,7 +57,7 @@ export default function CardInicio() {
         </CardBody>
         <CardFooter className="pt-0">
           {card.btn && (
-            <a href="#" className="inline-block">
+            <Link to={card.link} className="inline-block">
               <Button
                 size="sm"
                 variant="text"
@@ -63,7 +67,7 @@ export default function CardInicio() {
                 {card.btn}
                 <ArrowLongRightIcon strokeWidth={2} className="w-4 h-4" />
               </Button>
-            </a>
+            </Link>
           )}
         </CardFooter>
       </Card>
