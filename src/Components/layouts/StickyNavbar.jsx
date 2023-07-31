@@ -21,7 +21,7 @@ import { Link } from 'react-router-dom';
 
 function NavList() {
   return (
-    <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
+    <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1" >
       <InicioListMenu />
       <ConocenosListMenu />
       <InvolucrateListMenu />
@@ -52,6 +52,10 @@ export default function StickyNavbar() {
       () => window.innerWidth >= 960 && setOpenNav(false)
     );
   }, []);
+
+  const handleNavItemClick = () => {
+    setOpenNav(false); 
+  };
 
   return (
     <>
@@ -90,7 +94,7 @@ export default function StickyNavbar() {
             )}
           </IconButton>
         </div>
-        <Collapse open={openNav}>
+        <Collapse open={openNav} onClick={handleNavItemClick}>
           <NavList />
           <Link to="/contactos" className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
             <Button
@@ -98,6 +102,7 @@ export default function StickyNavbar() {
               size="sm"
               fullWidth
               className="flex items-center justify-center gap-4"
+              color="green"
             >
               <BsTelephone size={24} />
               Contactanos
