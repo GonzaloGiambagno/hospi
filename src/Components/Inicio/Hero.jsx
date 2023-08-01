@@ -53,6 +53,7 @@ const Hero = () => {
                   <p className="card__description">
                     Preinscripciones a partir del 1° de Noviembre
                   </p>
+                  <Link to="/educacion/enfermeria">                
                   <Button
                     variant="text"
                     className="flex items-center gap-2"
@@ -62,6 +63,7 @@ const Hero = () => {
                     Ver más
                     <ArrowLongRightIcon strokeWidth={2} className="h-5 w-5" />
                   </Button>
+                  </Link>
                 </div>
               </div>
               <div className="cardcss">
@@ -93,14 +95,14 @@ const Hero = () => {
               <img
                 className="object-cover w-40 h-40 rounded-xl shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80"
                 src={Imagen3}
-                alt=""
+                alt="informacion sobre residencias y fellowship"
               />
               <div className="card__content rounded-xl flex flex-col gap-4 justify-center">
                 <p className="card__title">Residencias y Fellowship</p>
                 <p className="card__description">
                   Inscripciones 2023 Abiertas!
                 </p>
-                <a href="#">
+                <Link to="/educacion/posgrado">
                   <Button
                     variant="text"
                     className="flex items-center gap-0.5"
@@ -110,7 +112,7 @@ const Hero = () => {
                     Ver más
                     <ArrowLongRightIcon strokeWidth={2} className="h-5 w-5" />
                   </Button>
-                </a>
+                </Link>
               </div>
             </div>
           </section>

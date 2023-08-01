@@ -9,12 +9,17 @@ import Ubicacion from "../Components/Contactos-Ubicacion/Ubicacion";
 // import NewsCarrusel from "../Components/Inicio/newsCarrusel";
 import { Typography } from "@material-tailwind/react";
 import ScrollAnimated from "../helpers/ScrollAnimated";
+import { Helmet } from 'react-helmet';
 
 const NewsCarrusel = lazy(() => import('../Components/Inicio/newsCarrusel'));
 
 const Inicio = () => {
   return (
     <main className="mx-auto max-w-screen-2xl md:px-4">
+        <Helmet>
+        <title>Hospital Italiano La Plata</title>
+        <meta name="description" content="Hospital Italiano de La Plata, Todo sobre nosotros!" />
+      </Helmet>
       <ScrollAnimated>
         <Hero />
       </ScrollAnimated>

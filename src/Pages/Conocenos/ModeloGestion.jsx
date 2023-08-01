@@ -14,7 +14,7 @@ const ModeloGestion = () => {
           content="Conocé nuestro modelo de gestion Hospitalaria"
         />
       </Helmet>
-      <main className="mx-auto max-w-screen-2xl p-4">
+      <main className="mx-auto max-w-screen-2xl py-2 sm:p-4">
         <Typography variant="h4" color="green" className="mb-4 text-center sm:text-left" textGradient>
             Modelo de Gestión hospitalaria
         </Typography>

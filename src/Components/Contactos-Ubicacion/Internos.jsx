@@ -51,7 +51,7 @@ const Internos = () => {
         <div className="mb-4 flex flex-col justify-between gap-8 md:flex-row md:items-center">
           <div>
             <Typography variant="h5" color="green">
-              Interno telefonicos
+              Internos telefonicos
             </Typography>
             <Typography color="gray" className="mt-1 font-normal">
               Comunicate directamente con cada servicio
@@ -60,7 +60,7 @@ const Internos = () => {
           <div className="flex w-full shrink-0 gap-2 md:w-max">
             <div className="w-full md:w-72">
               <Input
-                label="Search"
+                label="Buscar Internos"
                 icon={<BiSearchAlt className="h-5 w-5 text-green-500" />}
                 value={searchTerm}
                 onChange={handleSearchChange}

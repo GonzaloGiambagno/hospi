@@ -17,7 +17,7 @@ import { EducacionListMenu } from "./navbarItems/EducacionMenu";
 import { BsTelephone } from "react-icons/bs";
 import { LuHeartHandshake } from "react-icons/lu";
 import { useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 function NavList() {
   return (
@@ -45,6 +45,7 @@ function NavList() {
 
 export default function StickyNavbar() {
   const [openNav, setOpenNav] = useState(false);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     window.addEventListener(
@@ -56,6 +57,15 @@ export default function StickyNavbar() {
   const handleNavItemClick = () => {
     setOpenNav(false); 
   };
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+    setOpenNav(false);
+  }, [pathname]);
 
   return (
     <>

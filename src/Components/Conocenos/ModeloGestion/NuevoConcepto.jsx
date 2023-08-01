@@ -11,7 +11,7 @@ const ListItem = ({ children }) => (
 
 const NuevoConcepto = () => {
   return (
-    <section className="mt-5">
+    <section className="mt-5 p-2 sm:p-0">
       <Typography variant="h4" color="gray">
         Un nuevo concepto de medicina hospitalaria
       </Typography>
