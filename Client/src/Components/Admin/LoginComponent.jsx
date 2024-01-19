@@ -9,22 +9,31 @@ import {
 } from "@material-tailwind/react";
 import { useState } from "react";
 import { useAuth } from "../../Context/AuthContext";
-import { useNavigate } from "react-router-dom";
 
 const LoginComponent = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { login } = useAuth();
-  const navigate = useNavigate();
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleLogin = () => {
-    login(email, password);
-    navigate("/dashboard/home");
+  const handleLogin = async () => {
+    setErrorMessage("");
+    try {
+      await login(email, password);
+    } catch (error) {
+      setErrorMessage(
+        "Credenciales invalidas, por favor intentelo nuevamente."
+      );
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    handleLogin();
   };
 
   return (
-    <section>
-      {" "}
+    <form onSubmit={handleSubmit}>
       <Card className="w-96">
         <CardHeader
           variant="gradient"
@@ -37,6 +46,7 @@ const LoginComponent = () => {
         </CardHeader>
         <CardBody className="flex flex-col gap-4">
           <Input
+            color="green"
             label="Email"
             size="lg"
             type="email"
@@ -44,20 +54,21 @@ const LoginComponent = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
           <Input
+            color="green"
             label="Password"
             size="lg"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+          {errorMessage && (
+            <Typography variant="small" className="text-red-500">
+              {errorMessage}
+            </Typography>
+          )}
         </CardBody>
         <CardFooter className="pt-0">
-          <Button
-            onClick={handleLogin}
-            variant="gradient"
-            color="green"
-            fullWidth
-          >
+          <Button type="submit" variant="gradient" color="green" fullWidth>
             Ingresar
           </Button>
           <Typography
@@ -68,7 +79,7 @@ const LoginComponent = () => {
           </Typography>
         </CardFooter>
       </Card>
-    </section>
+    </form>
   );
 };
 

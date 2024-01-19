@@ -1,16 +1,15 @@
 import { Button } from "@material-tailwind/react";
 import { useNavigate } from "react-router-dom";
 
-const DashboardHome = () => {
+const Docencia = () => {
   const navigate = useNavigate();
-
   return (
     <div>
-      <Button size="sm" onClick={() => navigate("/dashboard/docencia")}>
-        Ir a docencia
+      <Button size="sm" onClick={() => navigate("/dashboard/home")}>
+        Ir a Home
       </Button>
     </div>
   );
 };
 
-export default DashboardHome;
+export default Docencia;
