@@ -7,8 +7,21 @@ import {
   Input,
   Button,
 } from "@material-tailwind/react";
+import { useState } from "react";
+import { useAuth } from "../../Context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const LoginComponent = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { login } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    login(email, password);
+    navigate("/dashboard/home");
+  };
+
   return (
     <section>
       {" "}
@@ -23,11 +36,28 @@ const LoginComponent = () => {
           </Typography>
         </CardHeader>
         <CardBody className="flex flex-col gap-4">
-          <Input label="Email" size="lg" />
-          <Input label="Password" size="lg" />
+          <Input
+            label="Email"
+            size="lg"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <Input
+            label="Password"
+            size="lg"
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
         </CardBody>
         <CardFooter className="pt-0">
-          <Button variant="gradient" color="green" fullWidth>
+          <Button
+            onClick={handleLogin}
+            variant="gradient"
+            color="green"
+            fullWidth
+          >
             Ingresar
           </Button>
           <Typography

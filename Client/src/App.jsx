@@ -12,36 +12,39 @@ import InvolucrateRoutes from "./Routes/Involucrate/Involucrate.router";
 import EducacionRoutes from "./Routes/Educacion/Educacion.routes";
 import Login from "./Pages/Administracion/Login.jsx";
 import PrivateRoutes from "./Routes/Admin/PrivateRoutes.jsx";
+import { AuthProvider } from "./Context/AuthContext.jsx";
 
 function App() {
   return (
-    <div className="">
-      <Helmet>
-        <title>Hospital Italiano La Plata</title>
-        <meta
-          name="description"
-          content="Hospital Italiano de La Plata. Tu salud Primero!"
-        />
-      </Helmet>
-      <Routes>
-        {/* Rutas Privadas (con autenticacion) */}
-        <Route path="/dashboard/*" element={<PrivateRoutes />} />
+    <AuthProvider>
+      <div className="">
+        <Helmet>
+          <title>Hospital Italiano La Plata</title>
+          <meta
+            name="description"
+            content="Hospital Italiano de La Plata. Tu salud Primero!"
+          />
+        </Helmet>
+        <Routes>
+          {/* Rutas Privadas (con autenticacion) */}
+          <Route path="/dashboard/*" element={<PrivateRoutes />} />
 
-        <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<Login />} />
 
-        {/* Rutas Publicas  */}
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Inicio />} />
-          <Route path="/vosyelhospital/*" element={<VosYelHospiRoutes />} />
-          <Route path="/educacion/*" element={<EducacionRoutes />} />
-          <Route path="/conocenos/*" element={<ConocenosRoutes />} />
-          <Route path="/involucrate/*" element={<InvolucrateRoutes />} />
-          <Route path="/contactos" element={<Contactos />} />-
-          <Route path="*" element={<NotFound />} />
-        </Route>
-      </Routes>
-      <ScrollToTopButton />
-    </div>
+          {/* Rutas Publicas  */}
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Inicio />} />
+            <Route path="/vosyelhospital/*" element={<VosYelHospiRoutes />} />
+            <Route path="/educacion/*" element={<EducacionRoutes />} />
+            <Route path="/conocenos/*" element={<ConocenosRoutes />} />
+            <Route path="/involucrate/*" element={<InvolucrateRoutes />} />
+            <Route path="/contactos" element={<Contactos />} />-
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
+        <ScrollToTopButton />
+      </div>
+    </AuthProvider>
   );
 }
 
