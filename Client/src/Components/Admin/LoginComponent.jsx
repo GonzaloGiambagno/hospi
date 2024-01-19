@@ -5,7 +5,6 @@ import {
   CardFooter,
   Typography,
   Input,
-  Checkbox,
   Button,
 } from "@material-tailwind/react";
 
@@ -26,9 +25,6 @@ const LoginComponent = () => {
         <CardBody className="flex flex-col gap-4">
           <Input label="Email" size="lg" />
           <Input label="Password" size="lg" />
-          <div className="-ml-2.5">
-            <Checkbox label="Remember Me" />
-          </div>
         </CardBody>
         <CardFooter className="pt-0">
           <Button variant="gradient" color="green" fullWidth>

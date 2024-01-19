@@ -1,6 +1,6 @@
-import "./App.css"
-import { Helmet } from 'react-helmet';
-import { Route, Routes } from 'react-router-dom';
+import "./App.css";
+import { Helmet } from "react-helmet";
+import { Route, Routes } from "react-router-dom";
 import Inicio from "./Pages/Inicio";
 import ScrollToTopButton from "./Components/layouts/ScrollToTop";
 import Contactos from "./Pages/Contactos";
@@ -11,20 +11,25 @@ import ConocenosRoutes from "./Routes/Conocemos/Conocenos.routes";
 import InvolucrateRoutes from "./Routes/Involucrate/Involucrate.router";
 import EducacionRoutes from "./Routes/Educacion/Educacion.routes";
 import Login from "./Pages/Administracion/Login.jsx";
-
-
+import PrivateRoutes from "./Routes/Admin/PrivateRoutes.jsx";
 
 function App() {
-
   return (
     <div className="">
       <Helmet>
         <title>Hospital Italiano La Plata</title>
-        <meta name="description" content="Hospital Italiano de La Plata. Tu salud Primero!" />
+        <meta
+          name="description"
+          content="Hospital Italiano de La Plata. Tu salud Primero!"
+        />
       </Helmet>
       <Routes>
+        {/* Rutas Privadas (con autenticacion) */}
+        <Route path="/dashboard/*" element={<PrivateRoutes />} />
+
         <Route path="/login" element={<Login />} />
 
+        {/* Rutas Publicas  */}
         <Route path="/" element={<Layout />}>
           <Route index element={<Inicio />} />
           <Route path="/vosyelhospital/*" element={<VosYelHospiRoutes />} />
@@ -34,10 +39,10 @@ function App() {
           <Route path="/contactos" element={<Contactos />} />-
           <Route path="*" element={<NotFound />} />
         </Route>
-        </Routes>
-        <ScrollToTopButton />
+      </Routes>
+      <ScrollToTopButton />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
