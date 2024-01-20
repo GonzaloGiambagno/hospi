@@ -95,7 +95,9 @@ export default function Ubicacion() {
                       <Typography variant="h6" color="green">
                         Telefono:
                       </Typography>
-                      <Typography className="select-all">{contacto}</Typography>
+                      <Typography variant="h6" className="select-all">
+                        {contacto}
+                      </Typography>
                     </div>
                   </div>
                   <div className="w-full h-full flex justify-center">
