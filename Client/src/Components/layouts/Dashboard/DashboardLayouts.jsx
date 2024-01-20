@@ -1,25 +1,19 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
-import {
-  Card,
-  Typography,
-  List,
-  ListItem,
-  ListItemPrefix,
-  Button,
-} from "@material-tailwind/react";
+import { Card, Typography, List, Button } from "@material-tailwind/react";
 import { Link, NavLink } from "react-router-dom";
 import {
   HomeIcon,
   AcademicCapIcon,
   PowerIcon,
 } from "@heroicons/react/24/solid";
+import { useAuth } from "../../../Context/AuthContext";
+import DashboardNavbar from "./DashboardNavbar";
 
 const DashboardLayout = ({ children }) => {
-  const [open, setOpen] = useState(0);
+  const { logout } = useAuth();
 
-  const handleOpen = (value) => {
-    setOpen(open === value ? 0 : value);
+  const handleLogout = async () => {
+    await logout();
   };
 
   const menus = [
@@ -32,10 +26,10 @@ const DashboardLayout = ({ children }) => {
   ];
 
   return (
-    <div className="flex flex-row gap-4">
+    <aside className="flex flex-row gap-3">
       <Card
         className="bg-gradient-to-br from-gray-800 to-gray-900 
-       inset-0  m-3 h-[calc(100vh-32px)] w-72 rounded-xl"
+       inset-0  m-3 h-[calc(100vh-32px)] w-96 rounded-xl"
       >
         <Link to="/dashboard/home" className="p-6 text-center">
           <Typography variant="h5" color="white">
@@ -73,6 +67,7 @@ const DashboardLayout = ({ children }) => {
             color="white"
             className="flex items-center gap-4 px-4 capitalize"
             fullWidth
+            onClick={handleLogout}
           >
             <PowerIcon className="h-5 w-5" />{" "}
             <Typography color="white" className="font-medium capitalize">
@@ -81,8 +76,11 @@ const DashboardLayout = ({ children }) => {
           </Button>
         </List>
       </Card>
-      <div className="">{children}</div>
-    </div>
+      <div className="flex flex-col w-screen mr-4 my-3">
+        <DashboardNavbar />
+        <section className="mt-4">{children}</section>
+      </div>
+    </aside>
   );
 };
 

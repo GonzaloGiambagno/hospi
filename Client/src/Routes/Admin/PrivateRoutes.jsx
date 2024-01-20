@@ -1,23 +1,19 @@
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import DashboardHome from "../../Pages/Administracion/DashboardHome.jsx";
 import Docencia from "../../Pages/Administracion/Docencia.jsx";
 import DashboardLayout from "../../Components/layouts/Dashboard/DashboardLayouts.jsx";
 import { useAuth } from "../../Context/AuthContext.jsx";
 import { useEffect } from "react";
 
-const icon = {
-  className: "w-5 h-5 text-inherit",
-};
-
 const PrivateRoutes = () => {
-  // const navigate = useNavigate();
   const { isAuthenticated } = useAuth();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!isAuthenticated) {
-      <Navigate to="/login" replace={true} />;
+      navigate("/login", { replace: true });
     }
-  }, [isAuthenticated]);
+  }, [isAuthenticated, navigate]);
 
   return (
     <DashboardLayout>

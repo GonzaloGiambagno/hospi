@@ -1,5 +1,5 @@
-// AuthContext.js
-import React, { createContext, useContext, useState } from "react";
+/* eslint-disable react/prop-types */
+import { createContext, useContext, useState } from "react";
 import api from "../Service/api";
 import { useNavigate } from "react-router-dom";
 
@@ -26,10 +26,12 @@ export const AuthProvider = ({ children }) => {
 
       const data = await response.json();
       setUser(data.user);
+      // console.log(data);
       localStorage.setItem("token", data.token);
       setIsAuthenticated(true);
       navigate("/dashboard/home");
     } catch (error) {
+      console.error("Error during login:", error);
       throw error;
     }
   };
@@ -37,6 +39,7 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     setUser(null);
     localStorage.removeItem("token");
+    setIsAuthenticated(false);
   };
 
   return (
