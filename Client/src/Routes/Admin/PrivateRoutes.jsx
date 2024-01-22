@@ -10,10 +10,12 @@ const PrivateRoutes = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!isAuthenticated) {
+    const storedToken = localStorage.getItem("token");
+
+    if (!storedToken) {
       navigate("/login", { replace: true });
     }
-  }, [isAuthenticated, navigate]);
+  }, [navigate]);
 
   return (
     <DashboardLayout>

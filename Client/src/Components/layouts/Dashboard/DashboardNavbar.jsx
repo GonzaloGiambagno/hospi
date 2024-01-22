@@ -1,5 +1,10 @@
 import { useLocation, Link } from "react-router-dom";
-import { Navbar, Typography, Breadcrumbs } from "@material-tailwind/react";
+import {
+  Navbar,
+  Typography,
+  Breadcrumbs,
+  Button,
+} from "@material-tailwind/react";
 import { UserCircleIcon } from "@heroicons/react/24/solid";
 import { useAuth } from "../../../Context/AuthContext";
 
@@ -38,18 +43,17 @@ export function DashboardNavbar() {
             {page}
           </Typography>
         </div>
-        <Typography
-          variant="text"
-          color="blue-gray"
-          className="hidden items-center gap-1 px-4 lg:flex normal-case"
-        >
-          {user && (
-            <>
-              <UserCircleIcon className="h-5 w-5 text-green-800" />
-              <Typography variant="small">{user.name}</Typography>
-            </>
-          )}
-        </Typography>
+
+        {user && (
+          <Button
+            variant="text"
+            color="blue-gray"
+            className="hidden items-center gap-1 px-4 lg:flex normal-case"
+          >
+            <UserCircleIcon className="h-5 w-5 text-green-800" />
+            <Typography variant="small">{user.name}</Typography>
+          </Button>
+        )}
       </div>
     </Navbar>
   );
