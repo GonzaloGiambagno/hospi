@@ -9,7 +9,6 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
 import { IoCalendarOutline } from "react-icons/io5";
 import { FaListCheck } from "react-icons/fa6";
 import { AiOutlineForm } from "react-icons/ai";
-import "./CardEnf.css";
 
 const contenidoCard = [
   {
@@ -31,7 +30,7 @@ const contenidoCard = [
 
 export default function CardsEnfermeria() {
   return (
-    <article className="flex flex-row flex-wrap justify-center items-center cards p-2 gap-4 mt-2 shadow-xl bg-gradient-to-r from-green-200 via-gray-200 to-red-200 lg:rounded-xl pb-6">
+    <article className="flex flex-row flex-wrap justify-center items-center p-2 gap-4 mt-2 shadow-xl bg-gradient-to-r from-green-200 via-gray-200 to-red-200 lg:rounded-xl pb-6">
       {contenidoCard.map((card, index) => (
         <Card className="mt-5 w-96 shadow-xl card" key={index}>
           <CardBody>

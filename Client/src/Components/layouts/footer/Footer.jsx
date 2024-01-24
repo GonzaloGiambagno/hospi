@@ -38,7 +38,7 @@ const currentYear = new Date().getFullYear();
 const ContactoItem = ({ icon, text }) => (
   <div className="flex gap-2">
     {icon}
-    <span className="select-all font-semibold">{text}</span>
+    <span className="select-all font-medium">{text}</span>
   </div>
 );
 
@@ -58,28 +58,28 @@ const Footer = () => {
   return (
     <div className="relative bottom-0 w-full">
       <div className="mx-auto w-full max-w-screen-2xl mt-5 rounded-t-2xl">
-        <div className="flex justify-center">
-          <CardHeader
-            variant="gradient"
-            color="green"
-            className="top-10 grid h-36 sm:h-24 w-10/12 place-items-center"
-          >
-            <div className="flex flex-wrap justify-around w-10/12 flex-col gap-2 md:flex-row">
-              <ContactoItem
-                icon={<BsFillPinMapFill size={22} />}
-                text="Av. 51 Nº 1725 e/ 29 y 30"
-              />
-              <ContactoItem
-                icon={<BsFillTelephoneFill size={22} />}
-                text="+54 221 512 9500"
-              />
-              <ContactoItem
-                icon={<HiOutlineMail size={24} />}
-                text="info@italianolaplata.org.ar"
-              />
-            </div>
-          </CardHeader>
-        </div>
+        {/* <div className="flex justify-center"> */}
+        <CardHeader
+          variant="gradient"
+          color="green"
+          className="top-10 grid sm:h-20 max-w-screen-2xl items-center"
+        >
+          <div className="flex flex-wrap justify-around flex-col md:flex-row">
+            <ContactoItem
+              icon={<BsFillPinMapFill size={22} />}
+              text="Av. 51 Nº 1725 e/ 29 y 30"
+            />
+            <ContactoItem
+              icon={<BsFillTelephoneFill size={22} />}
+              text="+54 221 512 9500"
+            />
+            <ContactoItem
+              icon={<HiOutlineMail size={24} />}
+              text="info@italianolaplata.org.ar"
+            />
+          </div>
+        </CardHeader>
+        {/* </div> */}
         <div className="grid grid-cols-1 justify-between p-4 pt-16 mt-2 items-center md:grid-cols-2 content-center border-t border-blue-gray-100">
           <div className="flex flex-col justify-center items-center gap-3 flex-wrap">
             <LogoFooter />
@@ -128,8 +128,11 @@ const Footer = () => {
             variant="small"
             className="mb-4 text-center font-normal text-blue-gray-900 md:mb-0"
           >
-            &copy; {currentYear} <a href="https://www.italianolaplata.org.ar/">Hospital Italiano La Plata</a>. All
-            Rights Reserved.
+            &copy; {currentYear}{" "}
+            <a href="https://www.italianolaplata.org.ar/">
+              Hospital Italiano La Plata
+            </a>
+            . All Rights Reserved.
           </Typography>
           <div className="flex gap-4 text-blue-gray-900 sm:justify-center">
             <SocialLink

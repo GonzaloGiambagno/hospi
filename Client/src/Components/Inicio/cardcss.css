@@ -1,25 +1,57 @@
-.cards .card {
-  cursor: pointer;
-  transition: 500ms;
-  -webkit-transition: 500ms;
-  -moz-transition: 500ms;
-  -ms-transition: 500ms;
-  -o-transition: 500ms;
+.go-corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background-color: #81c784;
+  border-radius: 0 4px 0 32px;
 }
 
-.cards .card:hover {
-  transform: scale(1.0, 1.0);
-  -webkit-transform: scale(1.0, 1.0);
-  -moz-transform: scale(1.0, 1.0);
-  -ms-transform: scale(1.0, 1.0);
-  -o-transform: scale(1.0, 1.0);
+.go-arrow {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-family: courier, sans;
 }
 
-.cards:hover > .card:not(:hover) {
-  /* filter: blur(1px); */
-  transform: scale(0.9, 0.9);
-  -webkit-transform: scale(0.9, 0.9);
-  -moz-transform: scale(0.9, 0.9);
-  -ms-transform: scale(0.9, 0.9);
-  -o-transform: scale(0.9, 0.9);
+.card {
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.card:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #c8e6c9;
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out;
+  }
+
+.card:hover:before {
+    transform: scale(21);
+  }
+
+
+.card:hover {
+  p {
+    transition: all 0.3s ease-out;
+    color: rgba(0, 0, 0, 0.8);
+  }
+  h3 {
+    transition: all 0.3s ease-out;
+    color: #ffffff;
+  }
 }
