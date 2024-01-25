@@ -64,7 +64,7 @@ const Footer = () => {
           color="green"
           className="top-10 grid sm:h-20 max-w-screen-2xl items-center"
         >
-          <div className="flex flex-wrap justify-around flex-col md:flex-row">
+          <div className="flex flex-wrap sm:justify-around flex-col md:flex-row gap-3 place-items-center p-2 sm:p-0">
             <ContactoItem
               icon={<BsFillPinMapFill size={22} />}
               text="Av. 51 Nº 1725 e/ 29 y 30"
