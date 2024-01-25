@@ -7,7 +7,7 @@ const Estadisticas = () => {
     <CardHeader
       variant="gradient"
       color="green"
-      className="mx-auto max-w-screen-2xl h-auto sm:h-auto lg:h-24 grid place-content-center md:mt-2 "
+      className="mx-auto w-11/12 sm:w-full sm:max-w-screen-2xl sm:h-auto lg:h-24 grid place-content-center mt-2 p-2 sm:p-0 "
     >
       <div className="flex flex-wrap justify-around w-full flex-col lg:gap-4 md:flex-row">
         <div className="p-2 flex flex-col justify-center items-center flex-wrap">
