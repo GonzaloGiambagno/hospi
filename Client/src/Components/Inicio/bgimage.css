@@ -1,21 +1,9 @@
 .bgimagen {
-  position: relative;
-}
-
-.bgimagen::before {
-  content: ""; 
   background-image: url("../../assets/backgroundCircle.svg");
-  background-position: bottom right;
+  background-position: bottom;
   background-repeat: no-repeat;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  /* Aplicar rotación de 180 grados solo a la imagen de fondo */
-  transform: rotate(180deg);
+  background-size: cover;
 }
-
 
 /* 
 PARA EL HERO:

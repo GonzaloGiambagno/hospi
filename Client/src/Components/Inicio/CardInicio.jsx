@@ -57,8 +57,8 @@ export default function CardInicio() {
             <Typography>{card.descripcion}</Typography>
           </CardBody>
           <CardFooter className="pt-0">
-            <Link class="go-corner" to={card.link}>
-              <div class="go-arrow">
+            <Link className="go-corner" to={card.link}>
+              <div className="go-arrow">
                 <ArrowLongRightIcon strokeWidth={2} className="w-4 h-4" />
               </div>
             </Link>
