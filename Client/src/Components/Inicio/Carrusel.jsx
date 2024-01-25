@@ -12,6 +12,9 @@ export default function Carrusel() {
   return (
     <Carousel
       className="md:rounded-xl mx-auto mt-2"
+      autoplay="true"
+      autoplayDelay="3500"
+      loop="true"
       navigation={({ setActiveIndex, activeIndex, length }) => (
         <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
           {new Array(length).fill("").map((_, i) => (
