@@ -45,13 +45,12 @@
   }
 
 
-.card:hover {
-  p {
-    transition: all 0.3s ease-out;
-    color: rgba(0, 0, 0, 0.8);
-  }
-  h3 {
+  h3:hover {
     transition: all 0.3s ease-out;
     color: #ffffff;
   }
+
+.parrafo:hover {
+  transition: all 0.3s ease-out;
+  color: rgba(0, 0, 0, 0.8);
 }

@@ -44,38 +44,39 @@ export default function CardInicio() {
     <article className=" flex flex-row flex-wrap justify-center items-center gap-4 mt-2">
       {contenidoCard.map((card, index) => (
         <Card className="mt-5 w-96 shadow-xl bg-gray-50 card" key={index}>
-          <CardBody>
-            {/* Icono */}
-            {card.icon && (
-              <Typography variant="h5" color="blue-gray" className="mb-2">
-                {
-                  <card.icon className="w-8 h-8 mr-2 inline-block text-red-300" />
-                }
-                {card.titulo}
-              </Typography>
-            )}
-            <Typography>{card.descripcion}</Typography>
-          </CardBody>
-          <CardFooter className="pt-0">
-            <Link className="go-corner" to={card.link}>
-              <div className="go-arrow">
+          <Link to={card.link}>
+            <CardBody>
+              {/* Icono */}
+              {card.icon && (
+                <Typography variant="h5" color="blue-gray" className="mb-2">
+                  {
+                    <card.icon className="w-8 h-8 mr-2 inline-block text-red-300" />
+                  }
+                  {card.titulo}
+                </Typography>
+              )}
+              <Typography className="parrafo">{card.descripcion}</Typography>
+            </CardBody>
+
+            <CardFooter className="pt-0">
+              <div className="go-arrow go-corner">
                 <ArrowLongRightIcon strokeWidth={2} className="w-4 h-4" />
               </div>
-            </Link>
-            {/* {card.btn && (
+              {/* {card.btn && (
               <Link to={card.link} className="inline-block">
                 <Button
-                  size="sm"
-                  variant="text"
-                  color="green"
-                  className="flex items-center gap-2"
+                size="sm"
+                variant="text"
+                color="green"
+                className="flex items-center gap-2"
                 >
-                  {card.btn}
-                  <ArrowLongRightIcon strokeWidth={2} className="w-4 h-4" />
+                {card.btn}
+                <ArrowLongRightIcon strokeWidth={2} className="w-4 h-4" />
                 </Button>
-              </Link>
-            )} */}
-          </CardFooter>
+                </Link>
+              )} */}
+            </CardFooter>
+          </Link>
         </Card>
       ))}
     </article>

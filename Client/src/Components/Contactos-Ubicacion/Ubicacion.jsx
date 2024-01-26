@@ -107,7 +107,7 @@ export default function Ubicacion() {
                       className="rounded-xl shadow-lg"
                       width="450"
                       height="400"
-                      loading="lazy"
+                      loading="async"
                     ></iframe>
                   </div>
                 </div>
