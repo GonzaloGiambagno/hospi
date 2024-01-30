@@ -1,14 +1,26 @@
+import { useState, useEffect } from "react";
 import { Carousel } from "@material-tailwind/react";
-import InnIoma from "../../assets/carruselNoticias/Innauguracion_IOMA_banner_web.webp";
-import añosHospi from "../../assets/carruselNoticias/136_Aniversario_banner_web.webp";
-import portada from "../../assets/carruselNoticias/portada.webp";
-import residencia from "../../assets/carruselNoticias/banner_web.webp";
-import premio from "../../assets/carruselNoticias/premio_RSE_banner_web.webp";
-import bannerpami from "../../assets/carruselNoticias/banner_pami.webp";
-import convenioIoma from "../../assets/carruselNoticias/Convenio_IOMA_rrss_banner_web.webp";
-import enfermeria from "../../assets/carruselNoticias/RRSS_Instituto_de_Enfermería-web.webp";
+import axios from "axios";
+import api from "../../Service/api";
 
 export default function Carrusel() {
+  const [images, setImages] = useState([]);
+
+  useEffect(() => {
+    const apiUrl = api.apiUrl;
+    const carouselApiUrl = `${apiUrl}/carousel`;
+
+    axios
+      .get(carouselApiUrl)
+      .then((response) => {
+        setImages(response.data);
+        // console.log(response.data);
+      })
+      .catch((error) => {
+        console.error("Error al obtener las imágenes:", error);
+      });
+  }, []);
+
   return (
     <Carousel
       className="md:rounded-xl mx-auto mt-2"
@@ -29,54 +41,15 @@ export default function Carrusel() {
         </div>
       )}
     >
-      <img
-        src={portada}
-        alt="puerta hospital italiano"
-        className="h-72 md:h-full w-full"
-        loading="lazy"
-      />
-      <img
-        src={añosHospi}
-        alt="cumple 136 años hospi "
-        className="h-72 md:h-full w-full"
-        loading="lazy"
-      />
-      <img
-        src={InnIoma}
-        alt="Innauguracion centro traumatologico con ioma"
-        className="h-72 md:h-full w-full"
-        loading="lazy"
-      />
-      <img
-        src={residencia}
-        alt="Residencia, inscripciones"
-        className="h-72 md:h-full w-full"
-        loading="lazy"
-      />
-      <img
-        src={premio}
-        alt="premio responsabilidad social"
-        className="h-72 md:h-full w-full"
-        loading="lazy"
-      />
-      <img
-        src={bannerpami}
-        alt="firma convenio con pami"
-        className="h-72 md:h-full w-full"
-        loading="lazy"
-      />
-      <img
-        src={convenioIoma}
-        alt="convenio directo con IOMA"
-        className="h-72 md:h-full w-full"
-        loading="lazy"
-      />
-      <img
-        src={enfermeria}
-        alt="Iscripciones escuela de enfermeria"
-        className="h-72 md:h-full w-full"
-        loading="lazy"
-      />
+      {images.map((image, index) => (
+        <img
+          key={index}
+          src={image.full_path}
+          alt={image.description || `Image ${index}`}
+          className="h-72 md:h-full w-full"
+          loading="lazy"
+        />
+      ))}
     </Carousel>
   );
 }
