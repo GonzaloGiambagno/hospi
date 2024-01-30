@@ -17,33 +17,31 @@ import { AuthProvider } from "./Context/AuthContext.jsx";
 function App() {
   return (
     <AuthProvider>
-      <div className="">
-        <Helmet>
-          <title>Hospital Italiano La Plata</title>
-          <meta
-            name="description"
-            content="Hospital Italiano de La Plata. Tu salud Primero!"
-          />
-        </Helmet>
-        <Routes>
-          {/* Rutas Privadas (con autenticacion) */}
-          <Route path="/dashboard/*" element={<PrivateRoutes />} />
+      <Helmet>
+        <title>Hospital Italiano La Plata</title>
+        <meta
+          name="description"
+          content="Hospital Italiano de La Plata. Tu salud Primero!"
+        />
+      </Helmet>
+      <Routes>
+        {/* Rutas Privadas (con autenticacion) */}
+        <Route path="/dashboard/*" element={<PrivateRoutes />} />
 
-          <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login />} />
 
-          {/* Rutas Publicas  */}
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Inicio />} />
-            <Route path="/vosyelhospital/*" element={<VosYelHospiRoutes />} />
-            <Route path="/educacion/*" element={<EducacionRoutes />} />
-            <Route path="/conocenos/*" element={<ConocenosRoutes />} />
-            <Route path="/involucrate/*" element={<InvolucrateRoutes />} />
-            <Route path="/contactos" element={<Contactos />} />-
-            <Route path="*" element={<NotFound />} />
-          </Route>
-        </Routes>
-        <ScrollToTopButton />
-      </div>
+        {/* Rutas Publicas  */}
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Inicio />} />
+          <Route path="/vosyelhospital/*" element={<VosYelHospiRoutes />} />
+          <Route path="/educacion/*" element={<EducacionRoutes />} />
+          <Route path="/conocenos/*" element={<ConocenosRoutes />} />
+          <Route path="/involucrate/*" element={<InvolucrateRoutes />} />
+          <Route path="/contactos" element={<Contactos />} />-
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+      <ScrollToTopButton />
     </AuthProvider>
   );
 }
