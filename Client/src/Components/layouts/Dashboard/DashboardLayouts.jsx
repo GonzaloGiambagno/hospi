@@ -17,7 +17,7 @@ const DashboardLayout = ({ children }) => {
   };
 
   const menus = [
-    { name: "Home", link: "/dashboard/home", icon: <HomeIcon /> },
+    { name: "Inicio", link: "/dashboard/Inicio", icon: <HomeIcon /> },
     {
       name: "Docencia",
       link: "/dashboard/docencia",
@@ -29,7 +29,7 @@ const DashboardLayout = ({ children }) => {
     <aside className="flex flex-row gap-3">
       <Card
         className="bg-gradient-to-br from-gray-800 to-gray-900 
-       inset-0  m-3 h-[calc(100vh-32px)] w-96 rounded-xl"
+       inset-0  m-3 h-[calc(100vh-24px)] w-96 rounded-xl"
       >
         <Link to="/dashboard/home" className="p-6 text-center">
           <Typography variant="h5" color="white">

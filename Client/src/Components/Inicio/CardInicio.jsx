@@ -2,7 +2,6 @@ import {
   CardBody,
   CardFooter,
   Typography,
-  Button,
   Card,
 } from "@material-tailwind/react";
 import { ArrowLongRightIcon } from "@heroicons/react/24/outline";
