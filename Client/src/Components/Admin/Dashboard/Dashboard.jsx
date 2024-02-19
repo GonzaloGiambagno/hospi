@@ -1,7 +1,7 @@
 import axios from "axios";
 import api from "../../../Service/api";
 import { PhotoIcon, TrashIcon } from "@heroicons/react/24/outline";
-import { PencilIcon, CloudArrowUpIcon } from "@heroicons/react/24/solid";
+import { CloudArrowUpIcon } from "@heroicons/react/24/solid";
 import {
   Card,
   CardHeader,
@@ -13,12 +13,14 @@ import {
 import { useCarousel } from "../../../Context/CarouselContext";
 import { useState } from "react";
 import ModalImage from "./ModalImage";
+import { useNavigate } from "react-router-dom";
 
 export const Dashboard = () => {
   const [isImageModalOpen, setIsImageModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   const { images, updateImages } = useCarousel();
-  const TABLE_HEAD = ["Titulo", "Descripcion", "Ver imagen", "Acciones"];
+  const TABLE_HEAD = ["Titulo", "Descripcion", "Ver imagen", "Eliminar"];
+  const navigate = useNavigate();
 
   const handleDelete = (imageId) => {
     axios
@@ -65,6 +67,7 @@ export const Dashboard = () => {
             className="flex items-center gap-2"
             size="sm"
             color="blue-gray"
+            onClick={() => navigate("/dashboard/inicio/agregar-imagen")}
           >
             <CloudArrowUpIcon strokeWidth={2} className="h-4 w-4" /> Agregar
             Imagen
@@ -127,9 +130,6 @@ export const Dashboard = () => {
                     </IconButton>
                   </td>
                   <td className={classes}>
-                    <IconButton variant="text" color="light-green">
-                      <PencilIcon className="h-6 w-6 " />
-                    </IconButton>
                     <IconButton
                       variant="text"
                       color="red"

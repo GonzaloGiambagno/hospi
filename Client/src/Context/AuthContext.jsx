@@ -26,7 +26,7 @@ export const AuthProvider = ({ children }) => {
       const data = await response.json();
       setUser(data.user);
       localStorage.setItem("token", data.token);
-      navigate("/dashboard/home");
+      navigate("/dashboard/inicio");
     } catch (error) {
       console.error("Error during login:", error);
       throw error;

@@ -20,7 +20,15 @@ const PrivateRoutes = () => {
     <DashboardLayout>
       <Routes>
         <Route
-          path="/Inicio"
+          path="/inicio"
+          element={
+            <CarouselProvider>
+              <DashboardHome />
+            </CarouselProvider>
+          }
+        />
+        <Route
+          path="/inicio/agregar-imagen"
           element={
             <CarouselProvider>
               <DashboardHome />
