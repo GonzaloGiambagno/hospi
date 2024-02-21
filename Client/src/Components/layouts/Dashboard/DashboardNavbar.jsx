@@ -11,7 +11,9 @@ import { useAuth } from "../../../Context/AuthContext";
 export function DashboardNavbar() {
   const { user } = useAuth();
   const { pathname } = useLocation();
-  const [layout, page] = pathname.split("/").filter((el) => el !== "");
+  const [layout, page, components] = pathname
+    .split("/")
+    .filter((el) => el !== "");
 
   return (
     <Navbar
@@ -19,7 +21,7 @@ export function DashboardNavbar() {
       className="rounded-xl transition-all px-0 py-1"
       fullWidth
     >
-      <div className="flex flex-col-reverse justify-between gap-6 md:flex-row md:items-center">
+      <div className="flex flex-col-reverse justify-between gap-6 md:flex-row md:items-center p-2">
         <div className="capitalize">
           <Breadcrumbs className="bg-transparent p-0 transition-all">
             <Link to={`/${layout}`}>
@@ -31,13 +33,24 @@ export function DashboardNavbar() {
                 {layout}
               </Typography>
             </Link>
-            <Typography
-              variant="small"
-              color="blue-gray"
-              className="font-normal"
-            >
-              {page}
-            </Typography>
+              <Link to={`/${layout}/${page}`}>
+                <Typography
+                  variant="small"
+                  color="blue-gray"
+                  className="font-normal transition-all hover:text-blue-500 hover:opacity-100"
+                >
+                  {page}
+                </Typography>
+              </Link>
+            {components && (
+              <Typography
+                variant="small"
+                color="blue-gray"
+                className="font-normal"
+              >
+                {components}
+              </Typography>
+            )}
           </Breadcrumbs>
           <Typography variant="h6" color="blue-gray">
             {page}
@@ -59,6 +72,5 @@ export function DashboardNavbar() {
   );
 }
 
-DashboardNavbar.displayName = "/src/widgets/layout/dashboard-navbar.jsx";
 
 export default DashboardNavbar;

@@ -17,7 +17,7 @@ const DashboardLayout = ({ children }) => {
   };
 
   const menus = [
-    { name: "Inicio", link: "/dashboard/Inicio", icon: <HomeIcon /> },
+    { name: "Inicio", link: "/dashboard/inicio", icon: <HomeIcon /> },
     {
       name: "Docencia",
       link: "/dashboard/docencia",

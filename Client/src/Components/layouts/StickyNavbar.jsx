@@ -17,11 +17,11 @@ import { EducacionListMenu } from "./navbarItems/EducacionMenu";
 import { BsTelephone } from "react-icons/bs";
 import { LuHeartHandshake } from "react-icons/lu";
 import { useEffect, useState } from "react";
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation } from "react-router-dom";
 
 function NavList() {
   return (
-    <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1" >
+    <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
       <InicioListMenu />
       <ConocenosListMenu />
       <InvolucrateListMenu />
@@ -55,7 +55,7 @@ export default function StickyNavbar() {
   }, []);
 
   const handleNavItemClick = () => {
-    setOpenNav(false); 
+    setOpenNav(false);
   };
 
   useEffect(() => {
@@ -86,7 +86,7 @@ export default function StickyNavbar() {
                 className="flex items-center lg:gap-2 rounded-full lg:px-5"
                 color="green"
               >
-              <BsTelephone size={20} className="hidden xl:block"/>
+                <BsTelephone size={20} className="hidden xl:block" />
                 Contactanos
               </Button>
             </Link>
@@ -98,15 +98,26 @@ export default function StickyNavbar() {
             onClick={() => setOpenNav(!openNav)}
           >
             {openNav ? (
-              <XMarkIcon className="h-6 w-6" strokeWidth={2} aria-label="close-menu-button" />
+              <XMarkIcon
+                className="h-6 w-6"
+                strokeWidth={2}
+                aria-label="close-menu-button"
+              />
             ) : (
-              <Bars3Icon className="h-6 w-6" strokeWidth={2} aria-label="open-menu-button" />
+              <Bars3Icon
+                className="h-6 w-6"
+                strokeWidth={2}
+                aria-label="open-menu-button"
+              />
             )}
           </IconButton>
         </div>
         <Collapse open={openNav} onClick={handleNavItemClick}>
           <NavList />
-          <Link to="/contactos" className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
+          <Link
+            to="/contactos"
+            className="flex w-full flex-nowrap items-center gap-2 lg:hidden"
+          >
             <Button
               variant="gradient"
               size="sm"
