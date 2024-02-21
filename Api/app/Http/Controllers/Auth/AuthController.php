@@ -7,6 +7,7 @@ use App\Http\Requests\Auth\LoginRequest;
 use App\Http\Requests\Auth\RegisterRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Tymon\JWTAuth\Facades\JWTAuth;
 
 class AuthController extends Controller
@@ -41,5 +42,16 @@ class AuthController extends Controller
         $user = User::where('email', $request->email)->first();
 
         return response()->json(compact('user', 'token'), 201);
+    }
+
+    public function checkAuthentication()
+    {
+        $user = Auth::user();
+
+        if ($user) {
+            return response()->json(['user' => $user]);
+        } else {
+            return response()->json(['message' => 'Unauthenticated'], 401);
+        }
     }
 }
