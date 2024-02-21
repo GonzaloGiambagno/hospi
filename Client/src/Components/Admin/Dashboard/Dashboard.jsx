@@ -13,14 +13,14 @@ import {
 import { useCarousel } from "../../../Context/CarouselContext";
 import { useState } from "react";
 import ModalImage from "./ModalImage";
-import { useNavigate } from "react-router-dom";
+import ModalAddImage from "./ModalAddImage";
 
 export const Dashboard = () => {
   const [isImageModalOpen, setIsImageModalOpen] = useState(false);
+  const [addImageModalOpen, setAddImageModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
   const { images, updateImages } = useCarousel();
   const TABLE_HEAD = ["Titulo", "Descripcion", "Ver imagen", "Eliminar"];
-  const navigate = useNavigate();
 
   const handleDelete = (imageId) => {
     axios
@@ -51,6 +51,10 @@ export const Dashboard = () => {
     setIsImageModalOpen(true);
   };
 
+  const handleAddImage = () => {
+    setAddImageModalOpen(true);
+  };
+
   return (
     <Card className="h-full">
       <CardHeader floated={false} shadow={false} className="rounded-none">
@@ -67,7 +71,7 @@ export const Dashboard = () => {
             className="flex items-center gap-2"
             size="sm"
             color="blue-gray"
-            onClick={() => navigate("/dashboard/inicio/agregar-imagen")}
+            onClick={() => handleAddImage()}
           >
             <CloudArrowUpIcon strokeWidth={2} className="h-4 w-4" /> Agregar
             Imagen
@@ -147,6 +151,10 @@ export const Dashboard = () => {
             isOpen={isImageModalOpen}
             onClose={() => setIsImageModalOpen(false)}
             imageUrl={selectedImage}
+          />
+          <ModalAddImage
+            isOpen={addImageModalOpen}
+            onClose={() => setAddImageModalOpen(false)}
           />
         </table>
       </CardBody>

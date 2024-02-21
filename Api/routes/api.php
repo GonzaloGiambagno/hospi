@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Storage;
 Route::prefix('auth')->group(function () {
     Route::post('register', [AuthController::class, 'register']);
     Route::post('login', [AuthController::class, 'login']);
+    Route::middleware('auth:api')->get('check', [AuthController::class, 'checkAuthentication']);
 });
 
 Route::middleware(['api'])->group(function () {

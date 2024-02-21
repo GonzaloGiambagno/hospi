@@ -31,8 +31,8 @@ const DashboardLayout = ({ children }) => {
         className="bg-gradient-to-br from-gray-800 to-gray-900 
        inset-0  m-3 h-[calc(100vh-24px)] w-96 rounded-xl"
       >
-        <Link to="/dashboard/home" className="p-6 text-center">
-          <Typography variant="h5" color="white">
+        <Link to="/" className="p-6 text-center">
+          <Typography variant="h4" color="white">
             Hospital Italiano
           </Typography>
         </Link>
