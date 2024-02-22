@@ -6,7 +6,6 @@ import ScrollAnimated from "../helpers/ScrollAnimated";
 function Layout() {
   return (
     <div>
-    
       <StickyNavbar />
 
       <Outlet />

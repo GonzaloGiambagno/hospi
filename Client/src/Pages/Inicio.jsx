@@ -1,7 +1,8 @@
-import { lazy, Suspense } from "react";
+import {  Suspense } from "react";
 // import BannerCovid from "../Components/Inicio/BannerCovid";
 import BannerSumate from "../Components/Inicio/BannerSumate";
-import CardInicio from "../Components/Inicio/CardInicio";
+// import CardInicio from "../Components/Inicio/CardInicio";
+import CardInfo from "../Components/Inicio/CardInfo";
 import Estadisticas from "../Components/Inicio/Estadisticas";
 import Carrusel from "../Components/Inicio/Carrusel.jsx";
 // import Hero from "../Components/Inicio/Hero";
@@ -32,7 +33,8 @@ const Inicio = () => {
         <Estadisticas />
       </ScrollAnimated>
       <ScrollAnimated>
-        <CardInicio />
+        {/* <CardInicio /> */}
+        <CardInfo />
       </ScrollAnimated>
       {/* <ScrollAnimated>
         <BannerCovid />

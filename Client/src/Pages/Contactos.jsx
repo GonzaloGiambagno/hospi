@@ -14,7 +14,7 @@ const Contactos = () => {
       </Helmet>
     <div className="mx-auto max-w-screen-2xl p-4">
       <Typography
-        variant="h3"
+        variant="h4"
         color="green"
         className="mb-3"
         textGradient
