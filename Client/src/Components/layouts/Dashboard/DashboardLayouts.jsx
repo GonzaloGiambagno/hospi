@@ -1,16 +1,18 @@
 /* eslint-disable react/prop-types */
 import { Card, Typography, List, Button } from "@material-tailwind/react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import {
   HomeIcon,
   AcademicCapIcon,
   PowerIcon,
 } from "@heroicons/react/24/solid";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
 import { useAuth } from "../../../Context/AuthContext";
 import DashboardNavbar from "./DashboardNavbar";
 
 const DashboardLayout = ({ children }) => {
   const { logout } = useAuth();
+  const navigate = useNavigate();
 
   const handleLogout = async () => {
     await logout();
@@ -72,6 +74,18 @@ const DashboardLayout = ({ children }) => {
             <PowerIcon className="h-5 w-5" />{" "}
             <Typography color="white" className="font-medium capitalize">
               Cerrar Sesión
+            </Typography>
+          </Button>
+          <Button
+            variant="text"
+            color="white"
+            className="flex items-center gap-4 px-4 normal-case"
+            fullWidth
+            onClick={()=>navigate("/")}
+          >
+            <ArrowTopRightOnSquareIcon class="h-5 w-5" />
+            <Typography color="white" className="font-medium">
+              Ir a la web
             </Typography>
           </Button>
         </List>

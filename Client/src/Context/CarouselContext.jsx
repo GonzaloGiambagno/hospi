@@ -30,8 +30,22 @@ export const CarouselProvider = ({ children }) => {
     setImages(newImages);
   };
 
+  const addImage = async (imageFormData) => {
+    try {
+      const response = await axios.post(`${api.apiUrl}/carousel`, imageFormData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+      setImages([...images, response.data]);
+    } catch (error) {
+      console.error("Error al agregar la imagen:", error);
+    }
+  };
+
+
   return (
-    <CarouselContext.Provider value={{ images, updateImages }}>
+    <CarouselContext.Provider value={{ images, updateImages, addImage }}>
       {children}
     </CarouselContext.Provider>
   );

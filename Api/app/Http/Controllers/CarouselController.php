@@ -15,7 +15,8 @@ class CarouselController extends Controller
 
     public function index()
     {
-        $carouselImages = Carousel::all();
+        // $carouselImages = Carousel::all();
+        $carouselImages = Carousel::orderBy('created_at', 'desc')->get();
         $carouselImages->transform(function ($image) {
             $image->full_path = asset("storage/" . $image->image_path);
             return $image;

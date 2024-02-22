@@ -1,10 +1,14 @@
+/* eslint-disable react/prop-types */
 import { Card, Input, Button, Typography } from "@material-tailwind/react";
 import { CloudArrowUpIcon, XCircleIcon } from "@heroicons/react/24/solid";
 import { useDropzone } from "react-dropzone";
 import { useState } from "react";
 
-const AddImage = () => {
+const AddImage = ({ onAddImage }) => {
   const [files, setFiles] = useState([]);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+
   const { getRootProps, getInputProps } = useDropzone({
     maxFiles: 1,
     onDrop: (acceptedFiles) => {
@@ -14,6 +18,17 @@ const AddImage = () => {
 
   const handleRemoveFile = () => {
     setFiles([]);
+  };
+
+  const handleSaveImage = () => {
+    if (title && files.length > 0) {
+      const formData = new FormData();
+      formData.append("title", title);
+      formData.append("description", description);
+      formData.append("image", files[0]);
+  
+      onAddImage(formData);
+    }
   };
 
   const fileList = files.map((file) => <li key={file.path}>{file.path}</li>);
@@ -32,6 +47,7 @@ const AddImage = () => {
             labelProps={{
               className: "before:content-none after:content-none",
             }}
+            onChange={(e) => setTitle(e.target.value)}
           />
           <Typography variant="h6" color="blue-gray" className="-mb-3">
             Descripcion
@@ -43,6 +59,7 @@ const AddImage = () => {
             labelProps={{
               className: "before:content-none after:content-none",
             }}
+            onChange={(e) => setDescription(e.target.value)}
           />
         </div>
         <section className="container">
@@ -58,7 +75,7 @@ const AddImage = () => {
               className="flex justify-center items-center gap-3"
             >
               <CloudArrowUpIcon strokeWidth={2} className="h-8 w-8 " />{" "}
-              Arrastrar Imagen o hacer click para seleccionarla en tu equipo
+              Arrastrar Imagen o hacer clic para seleccionarla en tu equipo
             </Typography>
           </div>
           {files.length > 0 && (
@@ -78,6 +95,7 @@ const AddImage = () => {
           variant="gradient"
           color="green"
           fullWidth
+          onClick={handleSaveImage}
         >
           Guardar imagen
         </Button>

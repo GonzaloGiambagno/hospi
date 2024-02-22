@@ -10,5 +10,9 @@ class Carousel extends Model
     use HasFactory;
 
     protected $table = 'carousel';
-    protected $fillable = ['image_path'];
+    protected $fillable = [
+        'title',
+        'description',
+        'image_path',
+    ];
 }

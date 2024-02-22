@@ -61,7 +61,7 @@ export const Dashboard = () => {
         <div className="flex items-center justify-between">
           <div>
             <Typography variant="h5" color="blue-gray">
-              Imagenes
+              Slider Portada
             </Typography>
             <Typography color="gray" className="mt-1 font-normal">
               Administrar las imagenes en la portada de la web
