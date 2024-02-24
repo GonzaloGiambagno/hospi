@@ -23,8 +23,8 @@ export default function Ubicacion() {
       contacto: "(0221) 512-9500",
     },
     {
-      label: "Centro de Hepatologia y Gastroenterologia",
-      value: "Centro de Hepatologia y Gastroenterologia",
+      label: "Consultorios Externos",
+      value: "Consultorios Externos",
       linkMap:
         "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3271.821140111276!2d-57.97476831122171!3d-34.91093780376125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2e714904ea9cd%3A0x3d25246605bd59b7!2sCentro%20de%20Hepatolog%C3%ADa%20y%20Gastroenterolog%C3%AD%C2%ADa!5e0!3m2!1ses-419!2sar!4v1688602848740!5m2!1ses-419!2sar",
       descripcion: "Calle 37 Nº 926 e/ 13 y 14.",

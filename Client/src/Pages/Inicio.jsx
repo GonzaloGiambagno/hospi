@@ -1,5 +1,4 @@
-import {  Suspense } from "react";
-// import BannerCovid from "../Components/Inicio/BannerCovid";
+import { Suspense } from "react";
 import BannerSumate from "../Components/Inicio/BannerSumate";
 // import CardInicio from "../Components/Inicio/CardInicio";
 import CardInfo from "../Components/Inicio/CardInfo";
@@ -11,6 +10,7 @@ import Ubicacion from "../Components/Contactos-Ubicacion/Ubicacion";
 import { Typography } from "@material-tailwind/react";
 import ScrollAnimated from "../helpers/ScrollAnimated";
 import { Helmet } from "react-helmet";
+import SectionUltimasNoticias from "../Components/Inicio/SectionUltimasNoticias.jsx";
 
 const Inicio = () => {
   return (
@@ -36,15 +36,15 @@ const Inicio = () => {
         {/* <CardInicio /> */}
         <CardInfo />
       </ScrollAnimated>
-      {/* <ScrollAnimated>
-        <BannerCovid />
-      </ScrollAnimated> */}
+      <ScrollAnimated>
+        <SectionUltimasNoticias />
+      </ScrollAnimated>
       <ScrollAnimated>
         <BannerSumate />
       </ScrollAnimated>
 
       <ScrollAnimated>
-        <Typography variant="h4" color="green" className="p-5 mt-5">
+        <Typography variant="h4" color="green" className="px-4 my-6">
           Donde Estamos?
         </Typography>
         <Ubicacion />

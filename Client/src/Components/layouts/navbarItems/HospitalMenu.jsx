@@ -65,7 +65,7 @@ const colors = {
       icon: HiOutlineNewspaper,
       title: "Noticias",
       description: "Mira las ultimas noticias del hospital",
-      linkTo: "/"
+      linkTo: "/vosyelhospital/noticias"
     }
   ];
 

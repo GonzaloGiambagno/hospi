@@ -3,7 +3,7 @@ import { AiOutlineUsergroupAdd } from "react-icons/ai";
 
 const BannerSumate = () => {
   return (
-    <article className="max-w-screen-2xl mx-auto mt-8 py-5 bg-gradient-to-r from-gray-300 to-gray-600 sm:rounded-xl">
+    <article className="max-w-screen-2xl mx-auto py-4 bg-gradient-to-r from-gray-300 to-gray-600 sm:rounded-xl">
       <section className="flex flex-wrap justify-center gap-2 items-center lg:gap-16 p-1">
         <Typography
           variant="h5"
