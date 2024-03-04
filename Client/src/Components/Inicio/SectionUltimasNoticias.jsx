@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function SectionUltimasNoticias() {
   return (
-    <>
+    <div>
       <div className="flex flex-wrap flex-row items-center sm:justify-between mt-6 sm:my-0">
         <Typography variant="h4" color="green" className="px-5">
           Ultimas Noticias
@@ -13,7 +13,7 @@ export default function SectionUltimasNoticias() {
       </div>
       <section className="flex flex-wrap justify-center xl:justify-between items-center text-center">
         {/* card 1 */}
-        <div className="mb-4 lg:mb-0 flex flex-col justify-center items-center lg:w-96 p-2 rounded-xl">
+        <div className="mb-4 lg:mb-0 flex flex-col justify-center items-center lg:w-80 p-2 rounded-xl">
           <div
             className="relative mb-4 sm:w-80 overflow-hidden rounded-md bg-cover bg-no-repeat shadow-lg"
             data-te-ripple-init
@@ -43,7 +43,7 @@ export default function SectionUltimasNoticias() {
           </Typography>
         </div>
         {/* card 2 */}
-        <div className="mb-4 lg:mb-0 flex flex-col justify-center items-center lg:w-96 p-2 rounded-xl">
+        <div className="mb-4 lg:mb-0 flex flex-col justify-center items-center lg:w-80 p-2 rounded-xl">
           <div
             className="relative mb-4 sm:w-80 overflow-hidden rounded-md bg-cover bg-no-repeat shadow-lg"
             data-te-ripple-init
@@ -73,7 +73,7 @@ export default function SectionUltimasNoticias() {
           </Typography>
         </div>
         {/* card 3 */}
-        <div className="mb-4 lg:mb-0 flex flex-col justify-center items-center lg:w-96 p-2 rounded-xl">
+        <div className="mb-4 lg:mb-0 flex flex-col justify-center items-center lg:w-80 p-2 rounded-xl">
           <div
             className="relative mb-4 sm:w-80 overflow-hidden rounded-md bg-cover bg-no-repeat shadow-lg"
             data-te-ripple-init
@@ -106,31 +106,32 @@ export default function SectionUltimasNoticias() {
       <div className="flex flex-wrap flex-row items-center sm:justify-between mt-4 sm:mt-0">
         <img src={separador} alt="" className="sm:h-32" />
         <Link to="/vosyelhospital/noticias">
-        <Button
-          variant="outlined"
-          color="green"
-          size="sm"
-          className="flex items-center gap-2"
-          link to
-        >
-          Ver más noticias{" "}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={2}
-            stroke="currentColor"
-            className="h-5 w-5"
+          <Button
+            variant="outlined"
+            color="green"
+            size="sm"
+            className="flex items-center gap-2"
+            link
+            to
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-            />
-          </svg>
-        </Button>
+            Ver más noticias{" "}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="h-5 w-5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+              />
+            </svg>
+          </Button>
         </Link>
       </div>
-    </>
+    </div>
   );
 }

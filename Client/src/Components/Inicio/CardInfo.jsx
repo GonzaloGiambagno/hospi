@@ -5,6 +5,7 @@ import { IoInformationCircleOutline } from "react-icons/io5";
 import "./cardcss.css";
 import { Link } from "react-router-dom";
 import { Button, Typography } from "@material-tailwind/react";
+import fondo from "../../assets/rawBg.svg";
 
 const contenidoCard = [
   {
@@ -27,7 +28,7 @@ const contenidoCard = [
     icon: IoInformationCircleOutline,
     titulo: "Informacion adicional",
     descripcion:
-    "Descubre nuestros servicios, especialidades, obras sociales, y documentación necesaria para agilizar tus trámites en nuestro hospital.",
+      "Descubre nuestros servicios, especialidades, obras sociales, y documentación necesaria para agilizar tus trámites en nuestro hospital.",
     btn: "Ver más",
     link: "/vosyelhospital/informacionUtil?tab=serviciosyespecialidades",
   },
@@ -41,7 +42,7 @@ export default function CardInfo() {
           <Link to={card.link}>
             <div className="w-full bg-white rounded-b-lg border-t-8 border-green-400 px-4 py-5 flex flex-col justify-around shadow-md hover:bg-gray-100">
               <div className="flex flex-col gap-3 h-36">
-              <Typography variant="h6">{card.titulo}</Typography>
+                <Typography variant="h6">{card.titulo}</Typography>
                 <Typography className="">{card.descripcion}</Typography>
               </div>
               <div className="flex justify-between">
