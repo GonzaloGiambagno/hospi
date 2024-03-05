@@ -110,7 +110,7 @@ export default function SectionUltimasNoticias() {
             variant="outlined"
             color="green"
             size="sm"
-            className="flex items-center gap-2"
+            className="flex items-center gap-2 rounded-full"
             link
             to
           >

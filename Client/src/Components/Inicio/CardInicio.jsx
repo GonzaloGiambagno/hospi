@@ -43,7 +43,7 @@ export default function CardInicio() {
     <article className=" flex flex-row flex-wrap justify-center items-center gap-4 mt-2">
       {contenidoCard.map((card, index) => (
         <Card className="mt-5 w-96 shadow-xl bg-gray-50 card" key={index}>
-          <Link to={card.link}>
+          <Link to={card.link} target="_blank">
             <CardBody>
               {/* Icono */}
               {card.icon && (

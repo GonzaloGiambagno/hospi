@@ -8,11 +8,15 @@ import {
   MenuList,
   MenuItem,
 } from "@material-tailwind/react";
-import { BsChevronDown, BsChevronUp } from 'react-icons/bs';
-import { FaChalkboardTeacher, FaUserGraduate, FaHospitalUser } from 'react-icons/fa';
-import { IoSchoolOutline, IoCalendarOutline } from 'react-icons/io5';
-import { LiaSchoolSolid } from 'react-icons/lia';
-import { GiHealing } from 'react-icons/gi';
+import { BsChevronDown, BsChevronUp } from "react-icons/bs";
+import {
+  FaChalkboardTeacher,
+  FaUserGraduate,
+  FaHospitalUser,
+} from "react-icons/fa";
+import { IoSchoolOutline, IoCalendarOutline } from "react-icons/io5";
+import { LiaSchoolSolid } from "react-icons/lia";
+import { GiHealing } from "react-icons/gi";
 import { Link } from "react-router-dom";
 
 const colors = {
@@ -32,42 +36,42 @@ const navListEducacionItems = [
     icon: FaChalkboardTeacher,
     title: "Docencia e Investigacion",
     description: "Nuestro compromiso por la comunidad",
-    linkTo: "/educacion/docenciaeinvestigacion"
+    linkTo: "/educacion/docenciaeinvestigacion",
   },
   {
     color: "orange",
     icon: LiaSchoolSolid,
     title: "Pregrado",
     description: "¡Realiza con nosotros tus prácticas Profesionales!",
-    linkTo: "/educacion/pregrado"
+    linkTo: "/educacion/pregrado",
   },
   {
     color: "blue",
     icon: FaUserGraduate,
     title: "Posgrado",
     description: "¡Residencias y Fellowship!",
-    linkTo: "/educacion/posgrado"
+    linkTo: "/educacion/posgrado",
   },
   {
     color: "teal",
     icon: FaHospitalUser,
     title: "Rotaciones y visitas",
     description: "Conocé los requisitos y viví tu experiencia",
-    linkTo: "/educacion/rotacionesyvisitas"
+    linkTo: "/educacion/rotacionesyvisitas",
   },
   {
     color: "purple",
     icon: GiHealing,
     title: "Tecnicatura en Enfermería",
     description: "Estudiá con nosotros.",
-    linkTo: "/educacion/enfermeria"
+    linkTo: "/educacion/enfermeria",
   },
   {
     color: "cyan",
     icon: IoCalendarOutline,
     title: "Cursos y Jornadas",
     description: "Enterate sobre nuestras jornadas y talleres",
-    linkTo: "/educacion/cursosyjornadas"
+    linkTo: "/educacion/cursosyjornadas",
   },
 ];
 
@@ -81,7 +85,10 @@ export function EducacionListMenu() {
   const renderItems = navListEducacionItems.map(
     ({ icon, title, description, color, linkTo }, key) => (
       <Link to={linkTo} key={key}>
-        <MenuItem className="flex items-center gap-3 rounded-lg" onClick={handleMobileMenuItemClick}>
+        <MenuItem
+          className="flex items-center gap-3 rounded-lg"
+          onClick={handleMobileMenuItemClick}
+        >
           <div className={`rounded-lg p-5 ${colors[color]}`}>
             {React.createElement(icon, {
               strokeWidth: 1,
@@ -122,7 +129,7 @@ export function EducacionListMenu() {
               onClick={() => setIsMobileMenuOpen((cur) => !cur)}
             >
               <IoSchoolOutline className="h-[18px] w-[18px]" />
-              Educacion
+              Docencia
               <BsChevronDown
                 strokeWidth={2.5}
                 className={`hidden h-3 w-3 transition-transform lg:block ${
@@ -139,7 +146,9 @@ export function EducacionListMenu() {
           </Typography>
         </MenuHandler>
         <MenuList className="hidden max-w-screen-xl rounded-xl lg:block">
-          <ul className="grid grid-cols-3 gap-y-2 focus:outline-none hover:outline-none">{renderItems}</ul>
+          <ul className="grid grid-cols-3 gap-y-2 focus:outline-none hover:outline-none">
+            {renderItems}
+          </ul>
         </MenuList>
       </Menu>
       <div className="block lg:hidden">

@@ -5,7 +5,7 @@ import { IoInformationCircleOutline } from "react-icons/io5";
 import "./cardcss.css";
 import { Link } from "react-router-dom";
 import { Button, Typography } from "@material-tailwind/react";
-import fondo from "../../assets/rawBg.svg";
+// import fondo from "../../assets/rawBg.svg";
 
 const contenidoCard = [
   {
@@ -39,7 +39,7 @@ export default function CardInfo() {
     <article className=" flex flex-row flex-wrap justify-center items-center gap-4 mt-2">
       {contenidoCard.map((card, index) => (
         <div className="mt-5 w-96" key={index}>
-          <Link to={card.link}>
+          <Link to={card.link} target="_blank">
             <div className="w-full bg-white rounded-b-lg border-t-8 border-green-400 px-4 py-5 flex flex-col justify-around shadow-md hover:bg-gray-100">
               <div className="flex flex-col gap-3 h-36">
                 <Typography variant="h6">{card.titulo}</Typography>
