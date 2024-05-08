@@ -29,6 +29,7 @@ const PrivateRoutes = () => {
             </CarouselProvider>
           }
         />
+        
         <Route path="/docencia" element={<Docencia />} />
       </Routes>
     </DashboardLayout>

@@ -8,18 +8,19 @@ import {
   IconButton,
   Input,
 } from "@material-tailwind/react";
-import EspecialidadesData from "../dbOsyEsp.json";
 import { BiSearchAlt } from "react-icons/bi";
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
+import axios from "axios";
+import api from "../../../../Service/api";
 
-
-const ITEMS_PER_PAGE = 14;
-const COLUMN_COUNT = 2;
+const ITEMS_PER_PAGE = 10 ;
 
 const TablaObrasSociales = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [obrasSociales, setObrasSociales] = useState([]);
+  const [totalPages, setTotalPages] = useState(1); 
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
@@ -30,7 +31,7 @@ const TablaObrasSociales = () => {
     setCurrentPage(pageNumber);
   };
 
-  const filteredRows = EspecialidadesData.obrasSociales.filter(
+  const filteredRows = obrasSociales.filter(
     (obraSocial) =>
          obraSocial.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -38,14 +39,6 @@ const TablaObrasSociales = () => {
   const lastIndex = currentPage * ITEMS_PER_PAGE;
   const firstIndex = lastIndex - ITEMS_PER_PAGE;
   const currentRows = filteredRows.slice(firstIndex, lastIndex);
-
-  const totalPages = Math.ceil(filteredRows.length / ITEMS_PER_PAGE);
-
-  useEffect(() => {
-    if (currentPage > totalPages) {
-      setCurrentPage(totalPages);
-    }
-  }, [currentPage, totalPages]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -59,29 +52,56 @@ const TablaObrasSociales = () => {
     };
   }, []);
 
-  const rowCount = Math.ceil(currentRows.length / COLUMN_COUNT);
+  //llamada a la Api
+  useEffect(() => {
+    const apiUrl = `${api.apiUrl}/obras-sociales`;
+
+    axios
+      .get(apiUrl)
+      .then((response) => {
+        const nombresObrasSociales = response.data.map(obraSocial => obraSocial.nombre_plan);
+        setObrasSociales(nombresObrasSociales);
+        setTotalPages(Math.ceil(nombresObrasSociales.length / ITEMS_PER_PAGE)); // Cambio 3: calcular total de páginas
+      })
+      .catch((error) => {
+        console.error("Error al obtener las imágenes:", error);
+      });
+  }, []);
+
+  // estilos para la lista con la os en negrrito
+  const stylizeName = (nombre_plan) => {
+    const separarPorPartes = nombre_plan.indexOf('-');
+    if (separarPorPartes !== -1) {
+      const primeraParte = nombre_plan.slice(0, separarPorPartes).trim();
+      const segundaParte = nombre_plan.slice(separarPorPartes + 1).trim();
+      return (
+        <span>
+          <span style={{ fontWeight: 'bold' }}>{primeraParte}</span>
+          {` - ${segundaParte}`}
+        </span>
+      );
+    }
+    return <span style={{ fontWeight: 'bold' }}>{nombre_plan}</span>;
+  };
+
   const columns = [];
 
-  for (let i = 0; i < COLUMN_COUNT; i++) {
-    const startIndex = i * rowCount;
-    const endIndex = startIndex + rowCount;
-    const columnRows = currentRows.slice(startIndex, endIndex);
+  const columnRows = currentRows;
 
-    columns.push(
-      <td key={i} className={`px-4 md:pt-4 mb-0 ${isSmallScreen ? 'block' : 'hidden sm:table-cell'} border border-r-2 border-b-0`}> {/* Agrega clases condicionales para ocultar o mostrar la columna en función del tamaño de pantalla */}
-        {columnRows.map((obraSocial, index) => (
-          <Typography
-            key={index}
-            variant="small"
-            color="blue-gray"
-            className="font-bold block mb-2"
-          >
-            {obraSocial}
-          </Typography>
-        ))}
-      </td>
-    );
-  }
+  columns.push(
+    <td key={0} className={`px-4 md:pt-4 mb-0 ${isSmallScreen ? 'block' : 'hidden sm:table-cell'} border border-r-2 border-b-0`}>
+      {columnRows.map((obraSocial, index) => (
+        <Typography
+          key={index}
+          variant="small"
+          color="blue-gray"
+          className="block mb-2"
+        >
+          {stylizeName(obraSocial)}
+        </Typography>
+      ))}
+    </td>
+  );
 
   return (
     <Card className="h-full w-full my-5 overflow-hidden">
@@ -109,12 +129,11 @@ const TablaObrasSociales = () => {
                   Obras Sociales:
                 </Typography>
               </th>
-              <th className="border-y border-blue-gray-100 bg-blue-gray-50/50 p-4 hidden sm:table-cell"></th> {/* Asegúrate de agregar la clase 'hidden' en la columna que deseas ocultar en pantallas pequeñas */}
             </tr>
           </thead>
-          <tbody >
+          <tbody>
             <tr>
-              {columns.map((column) => column)}
+              {columns}
             </tr>
           </tbody>
         </table>

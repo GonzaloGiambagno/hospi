@@ -12,7 +12,9 @@ import ScrollAnimated from "../helpers/ScrollAnimated";
 import { Helmet } from "react-helmet";
 import SectionUltimasNoticias from "../Components/Inicio/SectionUltimasNoticias.jsx";
 
+
 const Inicio = () => {
+
   return (
     <main className="mx-auto max-w-screen-2xl">
       <Helmet>
@@ -22,23 +24,29 @@ const Inicio = () => {
           content="Hospital Italiano de La Plata, Todo sobre nosotros!"
         />
       </Helmet>
+      
       <ScrollAnimated>{/* <Hero /> */}</ScrollAnimated>
+
       <ScrollAnimated>
         <Suspense fallback={<div>Cargando...</div>}>
           {/* <NewsCarrusel /> */}
           <Carrusel />
         </Suspense>
       </ScrollAnimated>
+
       <ScrollAnimated>
         <Estadisticas />
       </ScrollAnimated>
+
       <ScrollAnimated>
         {/* <CardInicio /> */}
         <CardInfo />
       </ScrollAnimated>
+
       <ScrollAnimated>
         <SectionUltimasNoticias />
       </ScrollAnimated>
+
       <ScrollAnimated>
         <BannerSumate />
       </ScrollAnimated>

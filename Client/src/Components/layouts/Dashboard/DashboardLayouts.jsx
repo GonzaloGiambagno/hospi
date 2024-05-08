@@ -6,7 +6,7 @@ import {
   AcademicCapIcon,
   PowerIcon,
 } from "@heroicons/react/24/solid";
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/outline";
+import { ArrowTopRightOnSquareIcon, NewspaperIcon  } from "@heroicons/react/24/outline";
 import { useAuth } from "../../../Context/AuthContext";
 import DashboardNavbar from "./DashboardNavbar";
 
@@ -20,6 +20,7 @@ const DashboardLayout = ({ children }) => {
 
   const menus = [
     { name: "Inicio", link: "/dashboard/inicio", icon: <HomeIcon /> },
+    { name: "Noticias", link: "/dashboard/noticias", icon: <NewspaperIcon /> },
     {
       name: "Docencia",
       link: "/dashboard/docencia",

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\CarouselController;
+use App\Http\Controllers\ObrasocialController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
@@ -20,3 +21,4 @@ Route::middleware(['api'])->group(function () {
 
 // rutas publicas 
 Route::get('/carousel', [CarouselController::class, 'index']);
+Route::get('/obras-sociales', [ObrasocialController::class, 'index']);

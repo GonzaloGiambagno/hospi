@@ -72,7 +72,7 @@ export default function Carrusel() {
             className="h-72 md:h-full w-full"
             loading="lazy"
           />
-          <figcaption className="absolute bottom-6 left-2/4 flex w-[calc(100%-4rem)] -translate-x-2/4 justify-between rounded-xl bg-gray-300/60 py-2 px-4 shadow-lg shadow-black/5  backdrop-blur-sm items-center">
+          {/* <figcaption className="absolute bottom-6 left-2/4 flex w-[calc(100%-4rem)] -translate-x-2/4 justify-between rounded-xl bg-gray-300/60 py-2 px-4 shadow-lg shadow-black/5  backdrop-blur-sm items-center">
             <div>
               <Typography variant="h5" color="blue-gray">
                 {image.title}
@@ -91,7 +91,7 @@ export default function Carrusel() {
                 Ver mas noticias
               </Button>
             </Link>
-          </figcaption>
+          </figcaption> */}
         </figure>
       ))}
     </Carousel>
